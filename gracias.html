@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDNVW42B');</script>
+<!-- End Google Tag Manager -->
+<title>Reserva confirmada · Taanah Hotel & Glamping</title>
+<meta name="description" content="Tu reservación en Taanah Hotel & Glamping está confirmada." />
+<!-- Página oculta: solo se llega aquí por redirección desde Cloudbeds -->
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="site.css" />
+
+
+<script>
+  // Lee los parámetros que Cloudbeds puede anexar a la URL de redirección
+  // (p. ej. ?reservation_id=ABC123&total=2890&currency=MXN) y los deja
+  // listos para los píxeles de arriba en window.TAANAH_CONVERSION.
+  (function () {
+    var q = new URLSearchParams(window.location.search);
+    var data = {
+      transaction_id: q.get('reservation_id') || q.get('res_id') || q.get('id') || undefined,
+      value: parseFloat(q.get('total') || q.get('grand_total') || '') || undefined,
+      currency: q.get('currency') || 'MXN'
+    };
+    window.TAANAH_CONVERSION = data;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'taanah_reserva_confirmada', ecommerce: data });
+    document.addEventListener('DOMContentLoaded', function () {
+      var el = document.getElementById('res-id');
+      if (el && data.transaction_id) {
+        el.textContent = 'Reservación ' + data.transaction_id;
+        el.style.display = 'inline-flex';
+      }
+    });
+  })();
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDNVW42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<header class="site-header header-light">
+  <a href="index.html" aria-label="Taanah">
+    <img class="logo logo-light" src="assets/brand/logo-taanah-2026-bone.png" alt="Taanah Hotel & Glamping" />
+    <img class="logo logo-dark" src="assets/brand/logo-taanah-2026-tinta.png" alt="Taanah Hotel & Glamping" />
+  </a>
+  <nav class="site-nav">
+    <ul class="nav-links">
+      <li><a href="habitaciones.html">Habitaciones</a></li>
+      <li><a href="experiencias.html">Experiencias</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero" style="min-height:78vh">
+  <img class="bg" src="assets/photos/taanah-aldea-atardecer.jpg" alt="Aldea de glamping al atardecer en Taanah" />
+  <div class="shell" style="text-align:center;max-width:760px;margin:0 auto">
+    <span class="eyebrow light" style="justify-content:center"><span class="pip"></span>Reserva confirmada</span>
+    <h1 class="serif">Nos vemos en <em>el bosque.</em></h1>
+    <p class="lede" style="margin-left:auto;margin-right:auto">Tu reservación quedó confirmada. En unos minutos recibirás un correo de Cloudbeds con todos los detalles de tu estancia.</p>
+    <span id="res-id" style="display:none;margin-top:18px;font-family:var(--ff-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:10px 18px;border-radius:100px"></span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell" style="max-width:880px">
+    <div class="sec-intro reveal">
+      <span class="eyebrow"><span class="pip"></span>Qué sigue</span>
+      <h2 class="serif" style="font-size:clamp(30px,4vw,48px);margin:16px 0 0">Antes de tu <em>llegada.</em></h2>
+    </div>
+    <div class="locate reveal" style="display:block">
+      <div class="info">
+        <div class="rows">
+          <div class="r"><span class="k">Confirmación</span><span class="v">Revisa tu correo (y la bandeja de spam). Ahí viene el resumen y las políticas de tu reserva.</span></div>
+          <div class="r"><span class="k">Check-in</span><span class="v">A partir de las 15:00 h · Check-out 12:00 h. Preséntate en la recepción del hotel.</span></div>
+          <div class="r"><span class="k">Cómo llegar</span><span class="v">15 Km Carretera Zapotlanejo - Tototlán, Zapotlanejo, Jalisco — a 40 minutos de Guadalajara.</span></div>
+          <div class="r"><span class="k">Spa & Temazcal</span><span class="v">Agenda tu masaje o ritual de temazcal con anticipación por WhatsApp; los lugares del atardecer vuelan.</span></div>
+          <div class="r"><span class="k">Políticas</span><span class="v">Depósito en garantía de $1,000 MXN al check-in, cancelación sin costo hasta 48 h antes y más detalles en las <a href="politicas.html" style="color:var(--accent)">políticas de hospedaje</a>.</span></div>
+          <div class="r"><span class="k">Dudas</span><span class="v">hotel@hdacoyotes.com · +52 33 2101 2205 · <a href="contacto.html#faq" style="color:var(--accent)">Preguntas frecuentes</a></span></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+          <a class="btn btn-primary" href="https://wa.me/523316990962?text=Hola%2C%20acabo%20de%20reservar%20en%20Taanah%20y%20tengo%20una%20duda" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          <a class="btn btn-dark" href="experiencias.html">Planear mis experiencias</a>
+          <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-bottom" style="border-top:0;padding-top:0">
+      <p>© 2026 Taanah Hotel & Glamping · Grupo Hacienda Coyotes</p>
+      <p><a href="https://www.hdacoyotes.com/aviso-de-privacidad/" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://instagram.com/taanah_glamping" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/523316990962" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
