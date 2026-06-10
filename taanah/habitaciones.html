@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDNVW42B');</script>
+<!-- End Google Tag Manager -->
+<title>Hospedaje · Taanah Hotel & Glamping</title>
+<meta name="description" content="Habitaciones, glampings y aldeas entre jardines y piedras volcánicas. Tarifa Premium con cena y desayuno, o Tarifa Kavala con consumo en el Day Club." />
+<link rel="stylesheet" href="site.css" />
+<style>
+  /* Tarifa explainer */
+  .tarifas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 760px) { .tarifas { grid-template-columns: 1fr; } }
+  .tarifa { border: 1px solid var(--line); border-radius: var(--r-md); padding: 30px 32px; background: var(--bruma); position: relative; }
+  .tarifa.kavala { background: var(--pizarra); color: var(--bone); border-color: var(--pizarra); }
+  .tarifa .badge { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: inline-block; }
+  .tarifa.kavala .badge { color: var(--bronce-2); }
+  .tarifa h3 { font-size: 28px; margin-bottom: 10px; }
+  .tarifa.kavala h3 { color: var(--bone); }
+  .tarifa p { font-size: 14.5px; color: var(--pizarra-2); margin-bottom: 16px; }
+  .tarifa.kavala p { color: rgba(255,255,255,0.8); }
+  .tarifa ul { list-style: none; display: grid; gap: 9px; }
+  .tarifa li { font-size: 14px; padding-left: 24px; position: relative; color: var(--pizarra); }
+  .tarifa.kavala li { color: rgba(255,255,255,0.9); }
+  .tarifa li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); }
+  .tarifa.kavala li::before { color: var(--bronce-2); }
+
+  /* Group headers */
+  .group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin: 0 0 30px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+  .group-head h2 { font-size: clamp(28px,4vw,46px); }
+  .group-head .count { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pizarra-2); }
+
+  /* Room card extras */
+  .room-card .ph .units { position: absolute; top: 14px; right: 14px; left: auto; background: var(--accent); color: var(--accent-ink); }
+  .room-card .cap-line { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pizarra-2); margin-bottom: 14px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .room-card .cap-line b { color: var(--tinta); font-weight: 600; }
+  .room-card .xnote { font-size: 12.5px; color: var(--pizarra-2); line-height: 1.5; padding: 12px 14px; background: var(--lino); border-radius: var(--r-sm); margin-bottom: 16px; }
+  .room-card .xnote.warn { background: oklch(0.93 0.04 75); }
+  .room-card .tarifa-line { font-family: var(--ff-mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .room-grid.two { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 760px) { .room-grid.two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDNVW42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<!-- BARRA DE GRUPO · unidades de negocio -->
+<div class="group-bar">
+  <img class="gb-logo" src="../assets/brand/logo-hc.png" alt="Grupo Hacienda Coyotes" />
+  <nav class="gb-units">
+    <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Inicio</a>
+    <a href="https://www.hdacoyotes.com/restaurante/" target="_blank" rel="noopener">Restaurante</a>
+    <a href="https://www.hdacoyotes.com/kavala" target="_blank" rel="noopener">Kavala</a>
+    <a href="https://www.campcoyote.mx" target="_blank" rel="noopener">Campamento</a>
+    <a href="../04-tequilera.html">Tequilera</a>
+  </nav>
+</div>
+
+<header class="site-header header-light">
+  <a href="index.html" aria-label="Taanah">
+    <img class="logo logo-light" src="../assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+    <img class="logo logo-dark" src="../assets/brand/logo-taanah-2026-tinta.png" alt="Taanah" />
+  </a>
+  <nav class="site-nav">
+    <ul class="nav-links">
+      <li><a href="habitaciones.html" class="active">Habitaciones</a></li>
+      <li><a href="experiencias.html">Experiencias</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="index.html#restaurante">Restaurante</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <cb-book-now-button property-code="H9bd0L" label="Reservar" height="90vh" width="90vw"></cb-book-now-button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <img class="bg" src="../assets/photos/taanah-aldea-atardecer.jpg" alt="Aldea de glamping al atardecer en Taanah" />
+  <div class="shell">
+    <span class="eyebrow light"><span class="pip"></span>Hospedaje</span>
+    <h1 class="serif">Elige cómo dormir <em>en el bosque.</em></h1>
+    <p class="lede">Desde habitaciones remodeladas hasta glampings premium. Todas incluyen alimentos — tú eliges la tarifa.</p>
+  </div>
+</section>
+
+<!-- TARIFAS -->
+<section class="section tight">
+  <div class="shell">
+    <div class="sec-intro reveal" style="max-width:760px">
+      <span class="eyebrow"><span class="pip"></span>Tu tarifa, tu plan</span>
+      <h2 class="serif" style="font-size:clamp(30px,4vw,48px);margin:16px 0 14px">Hospedaje con <em>alimentos incluidos.</em></h2>
+      <p>Toda reservación incluye alimentos. Elige la que va con tu plan — y cámbiala fácil al reservar. Cancelación sin costo hasta 48 h antes de tu llegada · <a href="politicas.html" style="color:var(--accent)">ver políticas de hospedaje</a>.</p>
+    </div>
+    <div class="tarifas">
+      <div class="tarifa reveal">
+        <span class="badge">Tarifa Premium</span>
+        <h3 class="serif">Cena & desayuno</h3>
+        <p>Para quienes vienen a comer rico sin salir del complejo y disfrutar el restaurante junto al lago.</p>
+        <ul>
+          <li>Hospedaje en la unidad elegida</li>
+          <li>Cena en Restaurante Hacienda Coyotes</li>
+          <li>Desayuno al día siguiente</li>
+        </ul>
+      </div>
+      <div class="tarifa kavala reveal">
+        <span class="badge">Tarifa Kavala</span>
+        <h3 class="serif">Day Club & desayuno</h3>
+        <p>Ideal si planeas vivir Kavala Day Club. Cambias la cena por consumo dentro de Kavala.</p>
+        <ul>
+          <li>Hospedaje en la unidad elegida</li>
+          <li>Platillo + bebida en Kavala Day Club</li>
+          <li>Desayuno en el restaurante</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLAMPING & ALDEAS -->
+<section class="section alt">
+  <div class="shell">
+    <div class="group-head reveal">
+      <div>
+        <span class="eyebrow"><span class="pip"></span>Glamping & Aldeas</span>
+        <h2 class="serif" style="margin-top:10px">Tu aldea en la <em>naturaleza.</em></h2>
+      </div>
+      <span class="count">36 unidades de glamping</span>
+    </div>
+    <div class="room-grid two">
+
+      <article class="room-card reveal" data-gallery="tuunich">
+        <div class="ph"><span class="tag">2–4 personas</span><span class="tag units">9 unidades</span><img src="../assets/photos/tuunich-cabana-exterior.jpg" alt="Cabaña A-Frame de la Suite Tuunich entre piedras volcánicas" /><button class="gal-count" type="button">Ver 4 fotos</button></div>
+        <div class="gal-thumbs">
+          <button type="button"><img src="../assets/photos/tuunich-interior-aframe.jpg" alt="Interior A-Frame con techo de madera y salida al jardín" /></button>
+          <button type="button"><img src="../assets/photos/tuunich-interior-cama.jpg" alt="Cama Queen con cabecera de parota en la Suite Tuunich" /></button>
+          <button type="button"><img src="../assets/photos/tuunich-aldea-aerea.jpg" alt="Vista aérea de la Aldea Tuunich entre árboles y piedras" /></button>
+        </div>
+        <div class="body">
+          <span class="ey">Glamping premium</span>
+          <h3 class="serif">Suite Tuunich Glamping</h3>
+          <div class="cap-line"><span>Cama <b>Queen</b></span><span>+ <b>Sofá cama</b></span><span>Baño <b>privado</b></span></div>
+          <p>La experiencia premium del complejo, entre jardines y piedras gigantes — <em>tuunich</em> significa “piedras” en maya. Con fogata privada para cerrar la noche.</p>
+          <div class="feats"><span>A/C</span><span>Calefacción</span><span>Fogata privada</span><span>Alexa</span><span>Cafetera</span><span>Servibar</span><span>Wi-Fi</span></div>
+          <div class="tarifa-line">Premium o Kavala · alimentos incluidos</div>
+          <div class="foot"><div class="price serif" style="font-size:19px">Aldea Tuunich</div><a class="btn btn-primary" data-cloudbeds href="#">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="room-card reveal" data-gallery="deluxe">
+        <div class="ph"><span class="tag">2 personas</span><span class="tag units">10 unidades</span><img src="../assets/photos/deluxe-tienda-hamaca.jpg" alt="Deluxe Glamping Tent sobre deck con hamaca, rodeada de jardín" /><button class="gal-count" type="button">Ver 5 fotos</button></div>
+        <div class="gal-thumbs">
+          <button type="button"><img src="../assets/photos/deluxe-tienda-interior.jpg" alt="Interior de la tienda Deluxe con cama Queen y tapete artesanal" /></button>
+          <button type="button"><img src="../assets/photos/taanah-glamping-tent.jpg" alt="Cama Queen dentro de la tienda Deluxe" /></button>
+          <button type="button"><img src="../assets/photos/deluxe-deck-aerea.jpg" alt="Vista aérea de la tienda Deluxe sobre su deck privado" /></button>
+          <button type="button"><img src="../assets/photos/deluxe-aldea-aerea.jpg" alt="Aldea Deluxe vista desde el aire, entre bosque y piedras" /></button>
+        </div>
+        <div class="body">
+          <span class="ey">Glamping tent</span>
+          <h3 class="serif">Deluxe Glamping Tent</h3>
+          <div class="cap-line"><span>Cama <b>Queen</b></span><span>Deck <b>privado</b></span><span>Baño <b>junto a la unidad</b></span></div>
+          <p>La experiencia de glamping más clásica: tienda de lona sobre deck de madera, terraza y fogata privadas, con baño y regadera privados junto a cada tienda.</p>
+          <div class="feats"><span>Terraza privada</span><span>Fogata privada</span><span>Calefacción</span><span>Alexa</span><span>Cafetera</span><span>Wi-Fi</span></div>
+          <div class="tarifa-line">Premium o Kavala · alimentos incluidos</div>
+          <div class="foot"><div class="price serif" style="font-size:19px">Aldea Deluxe</div><a class="btn btn-primary" data-cloudbeds href="#">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="room-card reveal" data-gallery="luna">
+        <div class="ph"><span class="tag">2–4 personas</span><span class="tag units">5 unidades</span><img src="../assets/photos/luna-tienda-interior.jpg" alt="Interior de tienda en Aldea Luna con cama Queen" /><button class="gal-count" type="button">Ver 4 fotos</button></div>
+        <div class="gal-thumbs">
+          <button type="button"><img src="../assets/photos/luna-aldea-fuente.jpg" alt="Tiendas de la Aldea Luna alrededor de la fuente" /></button>
+          <button type="button"><img src="../assets/photos/luna-aldea-andador.jpg" alt="Andador de madera entre las tiendas de la Aldea Luna" /></button>
+          <button type="button"><img src="../assets/photos/temazcal-exterior.jpg" alt="Temazcal tradicional junto a la Aldea Luna" /></button>
+        </div>
+        <div class="body">
+          <span class="ey">Aldea · familias y grupos</span>
+          <h3 class="serif">Glamping Luna Tent</h3>
+          <div class="cap-line"><span>Cama <b>Queen</b></span><span>+ <b>Sofá cama matrimonial</b></span><span>Baños <b>compartidos</b></span></div>
+          <p>Pensada para familias, grupos y escuelas, junto al área de temazcal. Baños y regaderas compartidos exclusivos para la aldea.</p>
+          <div class="feats"><span>Calefacción</span><span>Cafetera</span><span>Wi-Fi</span><span>Teléfono</span><span>Cerca del temazcal</span></div>
+          <div class="xnote">Ideal para reservar la aldea completa en grupo o evento.</div>
+          <div class="foot"><div class="price serif" style="font-size:19px">Aldea Luna</div><a class="btn btn-primary" data-cloudbeds href="#">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="room-card reveal" data-gallery="kavala">
+        <div class="ph"><span class="tag">2 personas</span><span class="tag units">12 A-Frame</span><img src="../assets/photos/kavala-aframe-interior.jpg" alt="Interior A-Frame de Aldea Kavala con dos camas individuales" /><button class="gal-count" type="button">Ver 3 fotos</button></div>
+        <div class="gal-thumbs">
+          <button type="button"><img src="../assets/photos/taanah-aldea-kavala.jpg" alt="Glampings A-Frame de la Aldea Kavala" /></button>
+          <button type="button"><img src="../assets/photos/kavala-aldea-aerea.jpg" alt="Vista aérea de la Aldea Kavala junto al Day Club" /></button>
+        </div>
+        <div class="body">
+          <span class="ey">Aldea · junto a Kavala</span>
+          <h3 class="serif">Kavala Glamping</h3>
+          <div class="cap-line"><span><b>2 camas individuales</b></span><span>Baños <b>compartidos</b></span></div>
+          <p>Glampigs A-Frame a un paso de Kavala Day Club, para quienes vienen por el ambiente social del fin de semana.</p>
+          <div class="feats"><span>Ventilador</span><span>Wi-Fi</span><span>Baños exclusivos de la aldea</span></div>
+          <div class="xnote warn">Transparencia: se escucha música de Kavala los viernes (2:00–8:00 pm) y sábados y domingos (3:00–11:00 pm). Después aplica política de silencio.</div>
+          <div class="foot"><div class="price serif" style="font-size:19px">Aldea Kavala</div><a class="btn btn-primary" data-cloudbeds href="#">Reservar</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- HABITACIONES DEL HOTEL -->
+<section class="section">
+  <div class="shell">
+    <div class="group-head reveal">
+      <div>
+        <span class="eyebrow"><span class="pip"></span>Habitaciones del hotel</span>
+        <h2 class="serif" style="margin-top:10px">Cuartos con todas las <em>comodidades.</em></h2>
+      </div>
+      <span class="count">6 habitaciones</span>
+    </div>
+    <div class="room-grid two">
+
+      <article class="room-card reveal" data-gallery="estandar">
+        <div class="ph"><span class="tag">2 personas</span><span class="tag units">4 unidades</span><img src="../assets/photos/estandar-habitacion.jpg" alt="Habitación Estándar remodelada con cama Queen y piso de madera" /><button class="gal-count" type="button">Ver 4 fotos</button></div>
+        <div class="gal-thumbs">
+          <button type="button"><img src="../assets/photos/estandar-cama.jpg" alt="Cama Queen con muro de lambrín y luces de lectura" /></button>
+          <button type="button"><img src="../assets/photos/estandar-servibar.jpg" alt="Servibar y cafetera de cápsulas en la habitación" /></button>
+          <button type="button"><img src="../assets/photos/estandar-detalle.jpg" alt="Detalle de cortesías, copas y controles de la habitación" /></button>
+        </div>
+        <div class="body">
+          <span class="ey">Habitación</span>
+          <h3 class="serif">Habitación Estándar</h3>
+          <div class="cap-line"><span>Cama <b>Queen</b></span><span>Baño <b>privado</b></span></div>
+          <p>Recientemente remodeladas, con todo el confort de un cuarto de hotel y la tranquilidad del bosque afuera.</p>
+          <div class="feats"><span>Aire acondicionado</span><span>TV</span><span>Wi-Fi</span><span>Teléfono</span><span>Cafetera</span><span>Servibar</span></div>
+          <div class="tarifa-line">Premium o Kavala · alimentos incluidos</div>
+          <div class="foot"><div class="price serif" style="font-size:19px">Estándar</div><a class="btn btn-primary" data-cloudbeds href="#">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="room-card reveal" data-gallery="doble">
+        <div class="ph"><span class="tag">4–5 personas</span><span class="tag units">2 unidades</span><img src="../assets/photos/estandar-tv.jpg" alt="Habitación Doble remodelada con Smart TV y piso de madera" /></div>
+        <div class="body">
+          <span class="ey">Habitación familiar</span>
+          <h3 class="serif">Habitación Doble</h3>
+          <div class="cap-line"><span><b>2 camas Queen</b></span><span>+ <b>Sofá cama</b></span><span>Baño <b>privado</b></span></div>
+          <p>Más espacio para familias o grupos pequeños, con dos camas Queen y sofá cama, sin renunciar a ninguna comodidad.</p>
+          <div class="feats"><span>Aire acondicionado</span><span>TV</span><span>Wi-Fi</span><span>Teléfono</span><span>Cafetera</span><span>Servibar</span></div>
+          <div class="tarifa-line">Premium o Kavala · alimentos incluidos</div>
+          <div class="foot"><div class="price serif" style="font-size:19px">Doble</div><a class="btn btn-primary" data-cloudbeds href="#">Reservar</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PARA GRUPOS -->
+<section class="section alt">
+  <div class="shell">
+    <div class="group-head reveal">
+      <div>
+        <span class="eyebrow"><span class="pip"></span>Para familias y grupos</span>
+        <h2 class="serif" style="margin-top:10px">Todos bajo un <em>mismo techo.</em></h2>
+      </div>
+      <span class="count">Cabaña completa</span>
+    </div>
+    <div class="split gal-split" data-gallery="cabana">
+      <div>
+        <div class="media tall reveal" style="border-radius:var(--r-md) var(--r-md) 0 0;overflow:hidden"><img src="../assets/photos/cabana-exterior.jpg" alt="Exterior de la Cabaña Familiar con terraza y jardín" /></div>
+        <div class="gal-thumbs reveal">
+          <button type="button"><img src="../assets/photos/cabana-recamara-principal.jpg" alt="Recámara principal con cama King y chimenea" /></button>
+          <button type="button"><img src="../assets/photos/cabana-recamara.jpg" alt="Recámara con cama matrimonial y muros de piedra" /></button>
+          <button type="button"><img src="../assets/photos/cabana-recamara-doble.jpg" alt="Recámara con dos camas matrimoniales" /></button>
+          <button type="button"><img src="../assets/photos/cabana-cocineta.jpg" alt="Cocineta equipada con barra de madera" /></button>
+        </div>
+      </div>
+      <div class="split-text reveal">
+        <span class="ey" style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">Cabaña · 6 a 8 personas</span>
+        <h2 class="serif" style="font-size:clamp(30px,4vw,50px);margin:12px 0 16px">Cabaña <em>Familiar</em></h2>
+        <p>Dos habitaciones, sala, cocineta equipada y terraza: la opción para familias grandes o grupos que quieren su propio espacio dentro del complejo.</p>
+        <div class="cap-line" style="font-family:var(--ff-mono);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--pizarra-2);display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px"><span>2 habitaciones</span><span>2 baños privados</span><span>1 King + 2 matrimoniales + sofá</span></div>
+        <div class="feats" style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px">
+          <span>Cocineta equipada</span><span>Refrigerador</span><span>Estufa</span><span>Microondas</span><span>Cafetera</span><span>TV</span><span>Sala</span><span>Terraza</span>
+        </div>
+        <a class="btn btn-primary btn-lg" data-cloudbeds href="#">Reservar cabaña</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPA & TEMAZCAL -->
+<section class="section">
+  <div class="shell">
+    <div class="group-head reveal">
+      <div>
+        <span class="eyebrow"><span class="pip"></span>Completa tu estancia</span>
+        <h2 class="serif" style="margin-top:10px">Spa & <em>Temazcal</em></h2>
+      </div>
+      <span class="count">Masajes · rituales · al atardecer</span>
+    </div>
+    <div class="split gal-split" data-gallery="spa">
+      <div>
+        <div class="media tall reveal" style="border-radius:var(--r-md) var(--r-md) 0 0;overflow:hidden"><img src="../assets/photos/temazcal-exterior.jpg" alt="Temazcal tradicional de piedra con fogata encendida" /></div>
+        <div class="gal-thumbs reveal">
+          <button type="button"><img src="../assets/photos/spa-masaje.jpg" alt="Masaje descontracturante en el spa de Taanah" /></button>
+          <button type="button"><img src="../assets/photos/spa-masaje-parejas.jpg" alt="Masaje relajante para parejas a la luz de las velas" /></button>
+          <button type="button"><img src="../assets/photos/spa-exfoliante.jpg" alt="Exfoliación corporal con sales en el spa" /></button>
+        </div>
+      </div>
+      <div class="split-text reveal">
+        <span class="ey" style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">Spa & Bienestar · dentro del complejo</span>
+        <h2 class="serif" style="font-size:clamp(30px,4vw,50px);margin:12px 0 16px">Termina el día <em>sin prisa.</em></h2>
+        <p>Suma a tu reservación un ritual de temazcal al atardecer, un masaje entre los árboles o un día de spa para dos. Se agenda al reservar o directamente en recepción.</p>
+        <ul class="menu-list" style="margin:18px 0 26px">
+          <li><span class="d serif">Ritual de Temazcal</span><span class="p">90 min · $300</span></li>
+          <li><span class="d serif">Masaje relajante</span><span class="p">60 min · $950</span></li>
+          <li><span class="d serif">Día de spa para dos</span><span class="p">$1,700</span></li>
+        </ul>
+        <a class="btn btn-primary" href="experiencias.html">Ver spa & bienestar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <img src="../assets/photos/deluxe-aldea-aerea.jpg" alt="Vista aérea de la aldea de glamping entre el bosque" />
+  <div class="shell">
+    <h2 class="serif">Tu estancia es solo el <em>comienzo.</em></h2>
+    <p>Suma spa, temazcal, paseos a caballo, restaurante y Kavala. Reserva y arma tu experiencia completa.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary btn-lg" data-cloudbeds href="#">Ver disponibilidad</a>
+      <a class="btn btn-ghost on-dark btn-lg" href="experiencias.html">Ver experiencias</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="f-brand">
+        <img class="f-logo" src="../assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+        <p class="f-tag">Un destino donde te hospedas, comes, te relajas y la pasas bien sin salir del complejo. A 40 minutos de Guadalajara.</p>
+      </div>
+      <div class="f-col"><h4>Explorar</h4><ul>
+        <li><a href="habitaciones.html">Habitaciones</a></li><li><a href="experiencias.html">Experiencias</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="index.html#restaurante">Restaurante</a></li>
+      </ul></div>
+      <div class="f-col"><h4>Visítanos</h4><ul>
+        <li><a href="contacto.html">Contacto</a></li><li><a href="contacto.html#faq">FAQ</a></li><li><a href="politicas.html">Políticas de hospedaje</a></li><li><a href="reservas.html">Reservar</a></li>
+      </ul></div>
+      <div class="f-col"><h4>Contacto</h4><ul>
+        <li><p><a href="mailto:hotel@hdacoyotes.com">hotel@hdacoyotes.com</a></p></li><li><p>+52 33 2101 2205</p></li><li><p><a href="https://wa.me/523316990962" target="_blank" rel="noopener">WhatsApp +52 33 1699 0962</a></p></li><li><p>15 Km Carr. Zapotlanejo - Tototlán</p></li><li><p>Zapotlanejo, Jalisco</p></li><li><p><a href="https://instagram.com/taanah_glamping" target="_blank" rel="noopener">@taanah_glamping</a></p></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Taanah Hotel & Glamping · Grupo Hacienda Coyotes</p><p><a href="https://www.hdacoyotes.com/aviso-de-privacidad/" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://instagram.com/taanah_glamping" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/haciendacoyotes" target="_blank" rel="noopener">Facebook</a> · <a href="https://wa.me/523316990962" target="_blank" rel="noopener">WhatsApp</a></p></div>
+  </div>
+</footer>
+
+<script type="text/javascript" data-cookieconsent="ignore" src="https://static1.cloudbeds.com/booking-engine/latest/static/js/immersive-experience/cb-immersive-experience.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
