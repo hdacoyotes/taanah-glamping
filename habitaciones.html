@@ -17,8 +17,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Tarifa explainer */
   .tarifas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 760px) { .tarifas { grid-template-columns: 1fr; } }
-  .tarifa { border: 1px solid var(--line); border-radius: var(--r-md); padding: 30px 32px; background: var(--bruma); position: relative; }
+  .tarifa { border: 1px solid var(--line); border-radius: var(--r-md); padding: 30px 32px; background: var(--bruma); position: relative; transition: background .28s ease, border-color .28s ease, box-shadow .28s ease, transform .28s ease; cursor: default; }
+  .tarifa:hover { background: var(--verde); border-color: var(--verde); transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(43,49,17,0.6); }
+  .tarifa:hover .badge { color: var(--bone); }
+  .tarifa:hover h3 { color: var(--bone); }
+  .tarifa:hover p { color: rgba(255,255,255,0.82); }
+  .tarifa:hover li { color: rgba(255,255,255,0.92); }
+  .tarifa:hover li::before { color: var(--bone); }
   .tarifa.kavala { background: var(--pizarra); color: var(--bone); border-color: var(--pizarra); }
+  .tarifa.kavala:hover { background: var(--verde-2, #545E2A); border-color: var(--verde-2, #545E2A); }
+  .tarifa.kavala:hover .badge { color: var(--bone); }
   .tarifa .badge { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: inline-block; }
   .tarifa.kavala .badge { color: var(--bronce-2); }
   .tarifa h3 { font-size: 28px; margin-bottom: 10px; }
@@ -30,6 +38,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .tarifa.kavala li { color: rgba(255,255,255,0.9); }
   .tarifa li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); }
   .tarifa.kavala li::before { color: var(--bronce-2); }
+
+  /* Spa add-on menu */
+  .spa-menu-list { list-style: none; display: grid; gap: 0; }
+  .spa-menu-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .spa-menu-list li:first-child { padding-top: 0; }
+  .spa-menu-list li:last-child { border-bottom: none; }
+  .spa-menu-list .d { font-family: var(--ff-display); font-size: 21px; color: var(--tinta); }
+  .spa-menu-list .meta { display: flex; align-items: baseline; gap: 14px; white-space: nowrap; }
+  .spa-menu-list .dur { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bronce); }
+  .spa-menu-list .pr { font-family: var(--ff-display); font-size: 22px; color: var(--verde); min-width: 64px; text-align: right; }
 
   /* Group headers */
   .group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin: 0 0 30px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
@@ -59,9 +77,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="gb-units">
     <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Inicio</a>
     <a href="https://www.hdacoyotes.com/restaurante/" target="_blank" rel="noopener">Restaurante</a>
-    <a href="https://www.hdacoyotes.com/kavala" target="_blank" rel="noopener">Kavala</a>
+    <a href="https://www.kavaladayclub.com" target="_blank" rel="noopener">Kavala</a>
     <a href="https://www.campcoyote.mx" target="_blank" rel="noopener">Campamento</a>
-    <a href="../04-tequilera.html">Tequilera</a>
+    <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Tequilera</a>
   </nav>
 </div>
 
@@ -86,13 +104,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img class="bg" src="assets/photos/taanah-aldea-atardecer.jpg" alt="Aldea de glamping al atardecer en Taanah" />
   <div class="shell">
     <span class="eyebrow light"><span class="pip"></span>Hospedaje</span>
+    <span class="script md on-dark" style="display:block;margin:6px 0 2px">Duerme entre árboles</span>
     <h1 class="serif">Elige cómo dormir <em>en el bosque.</em></h1>
     <p class="lede">Desde habitaciones remodeladas hasta glampings premium. Todas incluyen alimentos — tú eliges la tarifa.</p>
   </div>
 </section>
 
 <!-- TARIFAS -->
-<section class="section tight">
+<section class="section tight tex-wood">
   <div class="shell">
     <div class="sec-intro reveal" style="max-width:760px">
       <span class="eyebrow"><span class="pip"></span>Tu tarifa, tu plan</span>
@@ -314,12 +333,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="split-text reveal">
         <span class="ey" style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">Spa & Bienestar · dentro del complejo</span>
-        <h2 class="serif" style="font-size:clamp(30px,4vw,50px);margin:12px 0 16px">Termina el día <em>sin prisa.</em></h2>
+        <h2 class="serif" style="font-size:clamp(30px,4vw,50px);margin:12px 0 16px">Suma una <em>experiencia más.</em></h2>
         <p>Suma a tu reservación un ritual de temazcal al atardecer, un masaje entre los árboles o un día de spa para dos. Se agenda al reservar o directamente en recepción.</p>
-        <ul class="menu-list" style="margin:18px 0 26px">
-          <li><span class="d serif">Ritual de Temazcal</span><span class="p">90 min · $300</span></li>
-          <li><span class="d serif">Masaje relajante</span><span class="p">60 min · $950</span></li>
-          <li><span class="d serif">Día de spa para dos</span><span class="p">$1,700</span></li>
+        <ul class="spa-menu-list" style="margin:20px 0 28px">
+          <li><span class="d serif">Ritual de Temazcal</span><span class="meta"><span class="dur">90 min</span><span class="pr">$300</span></span></li>
+          <li><span class="d serif">Masaje relajante</span><span class="meta"><span class="dur">60 min</span><span class="pr">$950</span></span></li>
+          <li><span class="d serif">Día de spa para dos</span><span class="meta"><span class="dur">Paquete</span><span class="pr">$1,700</span></span></li>
         </ul>
         <a class="btn btn-primary" href="experiencias.html">Ver spa & bienestar</a>
       </div>
@@ -344,6 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-top">
       <div class="f-brand">
         <img class="f-logo" src="assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+        <span class="script sm on-dark" style="display:block;margin:0 0 14px">Naturaleza con oficio</span>
         <p class="f-tag">Un destino donde te hospedas, comes, te relajas y la pasas bien sin salir del complejo. A 40 minutos de Guadalajara.</p>
       </div>
       <div class="f-col"><h4>Explorar</h4><ul>

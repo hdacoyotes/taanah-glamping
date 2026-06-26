@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 860px) { .exp-row, .exp-row.reverse { grid-template-columns: 1fr; direction: ltr; gap: 28px; } }
   .exp-row .media { border-radius: var(--r-md); overflow: hidden; aspect-ratio: 4/3; }
   .exp-row .media img { width: 100%; height: 100%; object-fit: cover; }
-  .exp-row .num { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--accent); }
+  .exp-row .num { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--verde); }
   .exp-row h2 { font-size: clamp(30px,4.2vw,52px); margin: 12px 0 16px; }
   .exp-row p { color: var(--pizarra-2); margin-bottom: 18px; max-width: 46ch; }
   .exp-row .meta { display: flex; gap: 26px; flex-wrap: wrap; font-family: var(--ff-mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pizarra-2); margin-bottom: 22px; }
@@ -33,6 +33,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .spa-card .dur { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronce-2); margin-bottom: 14px; }
   .spa-card p { font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 18px; }
   .spa-card .pr { font-family: var(--ff-display); font-size: 28px; color: var(--bone); }
+  .spa-card .pr-rows { display: grid; gap: 0; margin-top: 4px; }
+  .spa-card .pr-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-top: 1px solid rgba(255,255,255,0.12); padding: 11px 0; }
+  .spa-card .pr-row:first-child { border-top: none; padding-top: 2px; }
+  .spa-card .pr-row span { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronce-2); }
+  .spa-card .pr-row b { font-family: var(--ff-display); font-size: 26px; font-weight: 400; color: var(--bone); }
+  .spa-card .spa-more { margin-top: 16px; background: none; border: none; cursor: pointer; font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronce-2); padding: 0; transition: color .2s ease; }
+  .spa-card .spa-more:hover { color: var(--bone); }
+  .spa-card .spa-detail { margin-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 14px; }
+  .spa-card .spa-detail p { font-size: 13px; color: rgba(255,255,255,0.74); line-height: 1.6; margin: 0; }
+  .exp-note { text-align: center; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--pizarra-2); margin-top: 40px; }
 </style>
 <script type="text/javascript" data-cookieconsent="ignore" src="https://static1.cloudbeds.com/booking-engine/latest/static/js/immersive-experience/cb-immersive-experience.js"></script>
 </head>
@@ -47,9 +57,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="gb-units">
     <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Inicio</a>
     <a href="https://www.hdacoyotes.com/restaurante/" target="_blank" rel="noopener">Restaurante</a>
-    <a href="https://www.hdacoyotes.com/kavala" target="_blank" rel="noopener">Kavala</a>
+    <a href="https://www.kavaladayclub.com" target="_blank" rel="noopener">Kavala</a>
     <a href="https://www.campcoyote.mx" target="_blank" rel="noopener">Campamento</a>
-    <a href="../04-tequilera.html">Tequilera</a>
+    <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Tequilera</a>
   </nav>
 </div>
 
@@ -71,11 +81,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <section class="page-hero">
-  <img class="bg" src="assets/photos/lago-kayaks.jpg" alt="Kayaks en el lago" />
+  <img class="bg" src="assets/photos/spa-masaje-parejas.jpg" alt="Masaje de pareja entre los árboles en el spa de Taanah" />
   <div class="shell">
     <span class="eyebrow light"><span class="pip"></span>Experiencias & Bienestar</span>
+    <span class="script md on-dark" style="display:block;margin:6px 0 2px">Respira hondo</span>
     <h1 class="serif">Días que se <em>recuerdan.</em></h1>
-    <p class="lede">Del temazcal al atardecer al kayak al amanecer. Todo lo que puedes vivir sin salir de Taanah — y a unos pasos, en Kavala.</p>
+    <p class="lede">Del temazcal al atardecer al kayak en el lago. Todo lo que puedes vivir sin salir de Taanah — y a unos pasos, en Kavala.</p>
   </div>
 </section>
 
@@ -88,74 +99,109 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="reveal">
           <div class="num">01 · Bienestar</div>
           <h2 class="serif">Temazcal al <em>atardecer</em></h2>
-          <p>Un ritual ancestral de vapor y plantas que cierra el día y abre la calma. Guiado, en grupos pequeños, justo cuando el bosque se tiñe de dorado.</p>
-          <div class="meta"><span>Duración <b>60 MIN</b></span><span>CUPO MAX 22</span><span>Desde <b>$300 P/P</b></span></div>
+          <p>Vapor, plantas medicinales y respiración guiada para cerrar el día. En grupos pequeños, al caer la tarde.</p>
+          <div class="meta"><span>Duración <b>90 min</b></span><span>Grupos <b>pequeños</b></span><span>Desde <b>$300</b></span></div>
           <a class="btn btn-dark" href="contacto.html">Reservar ritual</a>
         </div>
       </article>
 
       <article class="exp-row reverse">
-        <div class="media reveal"><img src="assets/photos/lago-kayaks.jpg" alt="Kayak en el lago" /></div>
+        <div class="media reveal"><img src="assets/photos/actividad-kayak.jpg" alt="Kayak en el lago de Taanah" /></div>
         <div class="reveal">
           <div class="num">02 · Aire libre</div>
           <h2 class="serif">Kayak en el <em>lago</em></h2>
-          <p>Rema sobre agua quieta entre montañas, al amanecer o a media tarde. Sin experiencia previa; nosotros ponemos el equipo y el chaleco.</p>
+          <p>Rema a tu ritmo en el lago del restaurante, tranquilo y a tu medida. No necesitas experiencia: incluimos equipo y chaleco.</p>
           <div class="meta"><span>Duración <b>30 min</b></span><span>Nivel <b>Todos</b></span><span>Desde <b>$100</b></span></div>
-          <a class="btn btn-dark" href="contacto.html">Quiero remar</a>
+          <a class="btn btn-dark" href="contacto.html">Reservar</a>
         </div>
       </article>
 
       <article class="exp-row">
+        <div class="media reveal"><img src="assets/photos/actividad-paseo-caballo.jpg" alt="Paseo a caballo por el complejo" /></div>
+        <div class="reveal">
+          <div class="num">03 · Aire libre</div>
+          <h2 class="serif">Paseo a <em>caballo</em></h2>
+          <p>Recorre los senderos del complejo a caballo, acompañado por nuestro equipo. Apto para principiantes.</p>
+          <div class="meta"><span>Duración <b>20 min</b></span><span>Nivel <b>Todos</b></span><span>Desde <b>$150</b></span></div>
+          <a class="btn btn-dark" href="contacto.html">Reservar</a>
+        </div>
+      </article>
+
+      <article class="exp-row reverse">
+        <div class="media reveal"><img src="assets/photos/actividad-bicicletas.jpg" alt="Bicicletas en los caminos del bosque" /></div>
+        <div class="reveal">
+          <div class="num">04 · Aire libre</div>
+          <h2 class="serif">Bicicletas en el <em>bosque</em></h2>
+          <p>Pedalea por los caminos del bosque a tu ritmo. Bicicletas para todas las edades.</p>
+          <div class="meta"><span>Duración <b>30 min</b></span><span>Nivel <b>Todos</b></span><span>Desde <b>$100</b></span></div>
+          <a class="btn btn-dark" href="contacto.html">Reservar</a>
+        </div>
+      </article>
+
+      <article class="exp-row">
+        <div class="media reveal"><img src="assets/photos/actividad-tirolesa.jpg" alt="Tirolesa sobre el bosque" /></div>
+        <div class="reveal">
+          <div class="num">05 · Aventura</div>
+          <h2 class="serif">Tirolesa sobre el <em>lago</em></h2>
+          <p>Cruza el lago del restaurante por el aire en nuestra tirolesa. Equipo y arnés incluidos.</p>
+          <div class="meta"><span>Recorrido <b>completo</b></span><span>Nivel <b>Todos</b></span><span>Desde <b>$80</b></span></div>
+          <a class="btn btn-dark" href="contacto.html">Reservar</a>
+        </div>
+      </article>
+
+      <article class="exp-row reverse">
         <div class="media reveal"><img src="assets/photos/kavala-venue-pool-hero.jpg" alt="Kavala Day Club" /></div>
         <div class="reveal">
-          <div class="num">03 · A unos pasos</div>
+          <div class="num">06 · A unos pasos</div>
           <h2 class="serif">Kavala <em>Day Club</em></h2>
-          <p>Alberca, música, coctelería y ambiente de día de descanso. La cara más social de la naturaleza, ideal para grupos de amigos.</p>
+          <p>Alberca, música y coctelería en plan de día. La cara más social del complejo, ideal para grupos de amigos.</p>
           <div class="meta"><span>Vie <b>14–20 h</b></span><span>Sáb–Dom <b>15–23 h</b></span><span>Mayores <b>18+</b></span></div>
           <a class="btn btn-dark" href="https://www.kavaladayclub.com" target="_blank" rel="noopener">Más información</a>
         </div>
       </article>
 
-      <article class="exp-row reverse">
+      <article class="exp-row">
         <div class="media reveal"><img src="assets/photos/taanah-zona-glamping-aerea.jpg" alt="Senderismo y naturaleza" /></div>
         <div class="reveal">
-          <div class="num">04 · Naturaleza</div>
+          <div class="num">07 · Naturaleza</div>
           <h2 class="serif">Senderos & <em>fogata</em></h2>
-          <p>Recorre el bosque a tu aire y cierra el día con una fogata bajo las estrellas: malvaviscos, buena compañía y cielo despejado.</p>
+          <p>Recorre el bosque a tu ritmo y cierra la noche junto a la fogata: malvaviscos, buena compañía y cielo abierto.</p>
           <div class="meta"><span>Duración <b>Flexible</b></span><span>Nivel <b>Fácil</b></span><span>Fogata <b>con costo extra</b></span></div>
           <a class="btn btn-primary" data-cloudbeds href="#">Reservar estancia</a>
         </div>
       </article>
 
     </div>
+
+    <p class="exp-note reveal">Precios por persona. Reserva tus actividades en recepción a tu llegada o al hacer tu reservación.</p>
   </div>
 </section>
 
 <!-- SPA & BIENESTAR -->
-<section class="section tinta">
+<section class="section tinta tex-wood">
   <div class="shell">
     <div class="sec-intro center reveal">
       <span class="eyebrow light"><span class="pip"></span>Spa & Bienestar</span>
       <h2 class="serif">El cuerpo se relaja; la <em>cabeza, también.</em></h2>
-      <p>Tratamientos entre los árboles, con producto natural y manos expertas. Reserva tu espacio al hacer tu reservación o a tu llegada.</p>
+      <p>Tratamientos entre los árboles, con producto natural y manos expertas. Aparta tu espacio al reservar o a tu llegada.</p>
     </div>
-    <div class="spa-menu">
+    <div class="spa-menu" id="spa-menu" data-csv="https://docs.google.com/spreadsheets/d/e/2PACX-1vQmamoxIz52nN7VHT4ABvzFkF0NF2swOSttUOSxPB74rMk8O5QOZhnzq8lPru6nUK05qvr9sl-D8L4K/pub?gid=394859061&single=true&output=csv">
       <div class="spa-card reveal">
         <h3 class="serif">Masaje relajante</h3>
         <div class="dur">60 minutos</div>
-        <p>Maniobras suaves de cuerpo completo con aceites de la región para soltar tensión.</p>
+        <p>Cuerpo completo con aceites de la región para soltar tensión y bajar el ritmo.</p>
         <div class="pr">$950</div>
       </div>
       <div class="spa-card reveal">
         <h3 class="serif">Ritual de Temazcal</h3>
         <div class="dur">90 minutos</div>
         <p>Vapor, plantas y respiración guiada en grupos reducidos al atardecer.</p>
-        <div class="pr">$300 P/P</div>
+        <div class="pr">$300 p/p</div>
       </div>
       <div class="spa-card reveal">
         <h3 class="serif">Masaje en pareja</h3>
         <div class="dur">60 minutos</div>
-        <p>Masaje en pareja, masaje relajante </p>
+        <p>Lado a lado, dos terapeutas y el mismo aceite de la región. Para celebrar o desconectar en pareja.</p>
         <div class="pr">$1,900</div>
       </div>
     </div>
@@ -179,6 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-top">
       <div class="f-brand">
         <img class="f-logo" src="assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+        <span class="script sm on-dark" style="display:block;margin:0 0 14px">Naturaleza con oficio</span>
         <p class="f-tag">Un destino donde te hospedas, comes y la pasas bien sin salir del complejo. A 40 minutos de Guadalajara.</p>
       </div>
       <div class="f-col"><h4>Explorar</h4><ul>
@@ -196,5 +243,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="site.js"></script>
+<script>
+/* Spa · precios en vivo desde Google Sheets (CSV publicado).
+   Si la hoja no carga, se conservan las tarjetas estáticas de respaldo. */
+(function () {
+  var menu = document.getElementById('spa-menu');
+  if (!menu) return;
+  var url = menu.getAttribute('data-csv');
+  if (!url) return;
+
+  /* Toggle · descripción larga (delegado; sobrevive al re-render) */
+  menu.addEventListener('click', function(e){
+    var b = e.target.closest('.spa-more'); if(!b) return;
+    var d = b.nextElementSibling; if(!d || !d.classList.contains('spa-detail')) return;
+    if(d.hasAttribute('hidden')){ d.removeAttribute('hidden'); b.setAttribute('aria-expanded','true'); b.textContent='Ver menos −'; }
+    else { d.setAttribute('hidden',''); b.setAttribute('aria-expanded','false'); b.textContent='Ver más +'; }
+  });
+
+  function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim(); }
+  function esc(s){ var d=document.createElement('div'); d.textContent=(s==null?'':String(s)); return d.innerHTML; }
+  function money(v){ v=(v||'').trim(); if(!v||v==='-'||v==='\u2014') return ''; return /^\$/.test(v)?v:'$'+v; }
+
+  function parseCSV(text){
+    var rows=[],row=[],field='',i=0,inQ=false,c;
+    for(;i<text.length;i++){ c=text[i];
+      if(inQ){ if(c==='"'){ if(text[i+1]==='"'){field+='"';i++;} else inQ=false; } else field+=c; }
+      else { if(c==='"') inQ=true;
+        else if(c===',') { row.push(field); field=''; }
+        else if(c==='\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+        else if(c==='\r'){ /* skip */ }
+        else field+=c; } }
+    if(field.length||row.length){ row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  function colFinder(headers){
+    var H=headers.map(norm);
+    return function(){ for(var a=0;a<arguments.length;a++){ var idx=H.indexOf(arguments[a]); if(idx>-1) return idx;
+        for(var k=0;k<H.length;k++){ if(H[k].indexOf(arguments[a])>-1) return k; } } return -1; };
+  }
+
+  fetch(url, { cache: 'no-store' }).then(function(r){ if(!r.ok) throw 0; return r.text(); }).then(function(text){
+    var rows = parseCSV(text).filter(function(r){ return r.some(function(c){ return (c||'').trim(); }); });
+    if(rows.length < 2) return;
+    var find = colFinder(rows[0]);
+    var iName=find('clave','nombre','servicio');
+    var iShort=find('masaje','actividad');
+    var iPrecio=find('precio');
+    var iPrecio2=find('precio 2','precio2','pareja');
+    var iDur=find('duracion');
+    var iDesc=find('descripcion','desc');
+    if(iName<0) iName=iShort;
+    if(iName<0) return;
+    function titlecase(s){ return (s||'').toLowerCase().replace(/(^|[\s\/(ó])([a-záéíóúñ])/g, function(m,a,b){ return a+b.toUpperCase(); }); }
+    var html='';
+    for(var r=1;r<rows.length;r++){
+      var row=rows[r];
+      var name=titlecase((row[iName]||'').trim()); if(!name) continue;
+      var p1=iPrecio>-1?money(row[iPrecio]):'';
+      var p2=iPrecio2>-1?money(row[iPrecio2]):'';
+      var dur=iDur>-1?(row[iDur]||'').trim().replace(/(\d)\s*min/i,'$1 min'):'';
+      var shortTxt=iShort>-1?(row[iShort]||'').trim():'';
+      var longTxt=iDesc>-1?(row[iDesc]||'').trim():'';
+      var desc=shortTxt||longTxt;
+      var prs='';
+      if(p1) prs+='<div class="pr-row"><span>Individual</span><b>'+esc(p1)+'</b></div>';
+      if(p2) prs+='<div class="pr-row"><span>En pareja</span><b>'+esc(p2)+'</b></div>';
+      if(!prs && !p1 && !p2) prs='';
+      html+='<div class="spa-card">'+
+        '<h3 class="serif">'+esc(name)+'</h3>'+
+        (dur?'<div class="dur">'+esc(dur)+'</div>':'')+
+        (desc?'<p>'+esc(desc)+'</p>':'')+
+        (prs?'<div class="pr-rows">'+prs+'</div>':'')+
+        ((longTxt && longTxt!==shortTxt) ? '<button type="button" class="spa-more" aria-expanded="false">Ver más +</button><div class="spa-detail" hidden><p>'+esc(longTxt)+'</p></div>' : '')+
+      '</div>';
+    }
+    if(html) menu.innerHTML=html;
+  }).catch(function(){ /* respaldo: tarjetas estáticas */ });
+})();
+</script>
 </body>
 </html>

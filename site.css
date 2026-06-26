@@ -1,9 +1,11 @@
 /* ============================================================
-   TAANAH HOTEL & GLAMPING · SITIO WEB · Fase 2
-   Sistema visual aprobado: B · Pizarra & Salvia
-   Cormorant Garamond · Manrope · IBM Plex Mono
+   TAANAH HOTEL & GLAMPING · SITIO WEB · Fase 2 · v1.1
+   Sistema visual aprobado: B · Cantera & Salvia
+   Cormorant Garamond · Manrope · IBM Plex Mono · Little Reisa
+   Acento vegetal: Verde Taanah · librería gráfica recuperada
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@font-face { font-family: "Little Reisa"; src: url("../assets/fonts/LittleReisa.otf") format("opentype"); font-display: swap; }
 
 :root {
   /* —— Paleta aprobada —— */
@@ -20,8 +22,12 @@
   --line:      #DED7C9;
   --line-2:    #E9E3D7;
 
-  /* —— Token tweakable —— */
-  --accent:    var(--bronce);
+  /* —— Verde Taanah · acento vegetal (Manual v1.1) —— */
+  --verde:     #6B7636;
+  --verde-2:   #545E2A;
+
+  /* —— Token tweakable —— (Verde Taanah como acento dominante) */
+  --accent:    var(--verde);
   --accent-ink: #FBF8F1;
   /* Acento luminoso para texto sobre imágenes (no se pierde en la foto) */
   --accent-img: #F0DBA4;
@@ -30,6 +36,7 @@
   --ff-display: 'Cormorant Garamond', Georgia, serif;
   --ff-body: 'Manrope', system-ui, sans-serif;
   --ff-mono: 'IBM Plex Mono', monospace;
+  --ff-script: 'Little Reisa', cursive;
 
   --maxw: 1280px;
   --r-sm: 8px;
@@ -61,7 +68,7 @@ a { color: inherit; text-decoration: none; }
 .serif em, em.serif { font-style: italic; font-family: var(--ff-display); }
 .eyebrow {
   font-family: var(--ff-mono); font-size: 11.5px; letter-spacing: 0.24em;
-  text-transform: uppercase; color: var(--bronce); display: inline-flex; align-items: center; gap: 11px;
+  text-transform: uppercase; color: var(--verde); display: inline-flex; align-items: center; gap: 11px;
 }
 .eyebrow.light { color: var(--bronce-2); }
 .eyebrow .pip { width: 6px; height: 6px; border-radius: 99px; background: currentColor; }
@@ -191,7 +198,7 @@ h2 em, h1 em, h3 em { font-style: italic; color: var(--accent); }
    ============================================================ */
 .home-hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; color: var(--bone); overflow: hidden; }
 .home-hero .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transform: scale(1.04); }
-.home-hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(175deg, rgba(37,35,30,0.78) 0%, rgba(37,35,30,0.60) 38%, rgba(37,35,30,0.70) 62%, rgba(37,35,30,0.95) 100%); }
+.home-hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(175deg, rgba(37,35,30,0.55) 0%, rgba(37,35,30,0.28) 38%, rgba(37,35,30,0.45) 62%, rgba(37,35,30,0.94) 100%); }
 .home-hero .shell { position: relative; z-index: 2; width: 100%; padding-top: 130px; padding-bottom: 46px; }
 .home-hero .eyebrow { color: var(--accent-img); }
 .home-hero h1 { font-size: clamp(52px, 10vw, 148px); color: var(--bone); margin: 22px 0 0; max-width: 16ch; }
@@ -281,7 +288,7 @@ h2 em, h1 em, h3 em { font-style: italic; color: var(--accent); }
 @media (max-width: 980px) { .amenities { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { .amenities { grid-template-columns: repeat(2, 1fr); } }
 .amenity { text-align: center; padding: 26px 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--bruma); }
-.amenity svg { width: 34px; height: 34px; color: var(--accent); margin: 0 auto 14px; }
+.amenity svg { width: 34px; height: 34px; color: var(--verde); margin: 0 auto 14px; }
 .amenity .t { font-family: var(--ff-display); font-size: 19px; }
 .amenity .s { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pizarra-2); margin-top: 4px; }
 
@@ -443,3 +450,67 @@ cb-immersive-experience { display: block; width: 100%; min-height: 70vh; }
   .lb-prev, .lb-next { width: 44px; height: 44px; }
   .lb-cap { font-size: 16px; }
 }
+
+/* ============================================================
+   v1.1 · ELEMENTOS DE MARCA
+   Verde Taanah · Little Reisa · texturas · símbolos · íconos
+   (Manual de identidad Taanah v1.1 · regla 60·30·10)
+   ============================================================ */
+
+/* —— Pip vegetal en cada eyebrow (acento verde) —— */
+.eyebrow .pip { background: var(--verde); }
+.eyebrow.light .pip { background: var(--bronce-2); }   /* sobre oscuro el verde se apaga → bronce */
+
+/* —— Firma manuscrita · uso restringido (una línea por pieza) —— */
+.script { font-family: var(--ff-script); font-weight: 400; color: var(--verde); line-height: 0.9; letter-spacing: 0; display: inline-block; }
+.script.lg { font-size: clamp(38px, 5vw, 64px); }
+.script.md { font-size: clamp(26px, 3.2vw, 40px); }
+.script.sm { font-size: clamp(22px, 2.4vw, 30px); }
+.script.on-dark { color: var(--bronce-2); }
+.script.on-verde { color: var(--bone); }
+
+/* —— Banda Verde Taanah (acento vegetal a sangre) —— */
+.section.verde { background: var(--verde); color: var(--bone); }
+.section.verde h1, .section.verde h2, .section.verde h3 { color: var(--bone); }
+.section.verde h2 em, .section.verde h3 em { color: var(--bone); font-style: italic; opacity: 0.92; }
+.section.verde p, .section.verde .sec-intro p { color: rgba(255,255,255,0.84); }
+.section.verde .eyebrow { color: rgba(255,255,255,0.85); }
+.section.verde .eyebrow .pip { background: var(--bone); }
+.section.verde .script.on-verde { color: var(--bone); }
+/* Sobre banda verde, el botón primario se invierte para no perderse */
+.section.verde .btn-primary { background: var(--bone); color: var(--verde-2); }
+.section.verde .btn-primary:hover { background: var(--lino); transform: translateY(-2px); }
+.section.verde .link-arrow { color: var(--bone); }
+
+/* —— Textura de vetas de madera · fondo sutil —— */
+.tex-wood { position: relative; isolation: isolate; }
+.tex-wood::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: url('../assets/legacy/textura.png') repeat; background-size: 1000px auto;
+  opacity: 0.18; mix-blend-mode: multiply; pointer-events: none;
+}
+.section.dark.tex-wood::before, .section.tinta.tex-wood::before, .section.verde.tex-wood::before { opacity: 0.07; mix-blend-mode: screen; }
+
+/* —— Divisor de líneas de agua —— */
+.divider-water { display: block; height: 30px; width: 100%; background: url('../assets/legacy/lineas.png') center / 520px auto no-repeat; opacity: 0.85; }
+.divider-water.on-dark { filter: brightness(0) invert(1); opacity: 0.45; }
+
+/* —— Símbolo orgánico decorativo (marca de agua) —— */
+.sym { position: absolute; pointer-events: none; z-index: 0; opacity: 0.5; }
+.sym img { width: 100%; height: auto; display: block; }
+.sym.faint { opacity: 0.16; }
+
+/* —— Íconos de experiencia · librería heredada (trazo verde) —— */
+.brand-feats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+@media (max-width: 980px) { .brand-feats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { .brand-feats { grid-template-columns: repeat(2, 1fr); } }
+.bfeat { text-align: center; padding: 30px 16px 24px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--bruma); transition: transform .3s ease, box-shadow .3s ease; }
+.bfeat:hover { transform: translateY(-5px); box-shadow: 0 24px 48px -28px rgba(37,35,30,0.4); }
+.bfeat img { width: 50px; height: 50px; object-fit: contain; margin: 0 auto 16px; }
+.bfeat .t { font-family: var(--ff-display); font-size: 21px; line-height: 1.1; }
+.bfeat .s { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pizarra-2); margin-top: 5px; }
+.section.dark .bfeat, .section.tinta .bfeat, .section.verde .bfeat { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.16); }
+.section.dark .bfeat .t, .section.tinta .bfeat .t, .section.verde .bfeat .t { color: var(--bone); }
+.section.dark .bfeat .s, .section.tinta .bfeat .s, .section.verde .bfeat .s { color: rgba(255,255,255,0.6); }
+/* sobre fondos oscuros / verde, trazo en hueso */
+.section.dark .bfeat img, .section.tinta .bfeat img, .section.verde .bfeat img { filter: brightness(0) invert(1); opacity: 0.92; }

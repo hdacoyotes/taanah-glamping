@@ -3,6 +3,14 @@
    ============================================================ */
 (function () {
   'use strict';
+
+  /* Silencia el ruido benigno de ResizeObserver que emite el widget Cloudbeds */
+  window.addEventListener('error', function (e) {
+    if (e && e.message && e.message.indexOf('ResizeObserver loop') !== -1) {
+      e.stopImmediatePropagation();
+    }
+  });
+
   var CLOUDBEDS = 'https://us2.cloudbeds.com/reservation/H9bd0L';
   var RESERVAS = 'reservas.html';
   var TKEY = 'taanah_tweaks_v1';
@@ -143,6 +151,7 @@
   /* ---- Tweaks: aplicar estado (todas las páginas) ---- */
   var ACCENTS = {
     bronce: { c: '#8F7A4E', ink: '#FBF8F1' },
+    verde:  { c: '#6B7636', ink: '#FBF8F1' },
     cobre:  { c: '#AE5E3C', ink: '#FBF3EC' },
     salvia: { c: '#6F7C6B', ink: '#F4F6F1' },
     oro:    { c: '#A98748', ink: '#2A2118' }
@@ -158,7 +167,7 @@
   window.TaanahTweaks = { read: readTweaks, key: TKEY, accents: ACCENTS, fonts: FONTS };
   function applyTweaks(t) {
     var root = document.documentElement;
-    var a = ACCENTS[t.accent] || ACCENTS.bronce;
+    var a = ACCENTS[t.accent] || ACCENTS.verde;
     root.style.setProperty('--accent', a.c);
     root.style.setProperty('--accent-ink', a.ink);
     if (t.headingFont && FONTS[t.headingFont]) root.style.setProperty('--ff-display', FONTS[t.headingFont]);

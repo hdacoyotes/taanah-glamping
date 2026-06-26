@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
   @media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } }
   .pillar { background: var(--bruma); border: 1px solid var(--line); border-radius: var(--r-md); padding: 34px 30px; }
-  .pillar svg { width: 34px; height: 34px; color: var(--accent); margin-bottom: 18px; }
+  .pillar svg { width: 34px; height: 34px; color: var(--verde); margin-bottom: 18px; }
   .pillar h3 { font-size: 25px; margin-bottom: 10px; }
   .pillar p { font-size: 14.5px; color: var(--pizarra-2); line-height: 1.55; }
   .cap-table { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
@@ -48,6 +48,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .lead-form input::placeholder, .lead-form textarea::placeholder { color: rgba(255,255,255,0.4); }
   .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus { outline: none; border-color: var(--bronce-2); }
   .lead-form option { color: #25231E; }
+  /* Galería de eventos */
+  .ev-gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  .ev-gallery figure { margin: 0; border-radius: var(--r-md); overflow: hidden; position: relative; background: var(--lino); }
+  .ev-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .ev-gallery figure:hover img { transform: scale(1.045); }
+  .ev-gallery .g-cap { position: absolute; left: 18px; bottom: 16px; right: 18px; color: var(--bone); font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; z-index: 2; }
+  .ev-gallery figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,22,12,0.55), rgba(20,22,12,0) 45%); opacity: 0; transition: opacity .4s ease; }
+  .ev-gallery figure.cap::after { opacity: 1; }
+  .ev-gallery .big { grid-column: span 4; aspect-ratio: 3/2; }
+  .ev-gallery .tall { grid-column: span 2; aspect-ratio: 3/4; }
+  .ev-gallery .third { grid-column: span 2; aspect-ratio: 4/3; }
+  .ev-gallery .half { grid-column: span 3; aspect-ratio: 16/10; }
+  @media (max-width: 860px) {
+    .ev-gallery { grid-template-columns: repeat(2, 1fr); }
+    .ev-gallery .big, .ev-gallery .tall, .ev-gallery .third, .ev-gallery .half { grid-column: span 1; aspect-ratio: 4/3; }
+    .ev-gallery .big { grid-column: span 2; }
+  }
 </style>
 <script type="text/javascript" data-cookieconsent="ignore" src="https://static1.cloudbeds.com/booking-engine/latest/static/js/immersive-experience/cb-immersive-experience.js"></script>
 </head>
@@ -68,9 +85,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="gb-units">
     <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Inicio</a>
     <a href="https://www.hdacoyotes.com/restaurante/" target="_blank" rel="noopener">Restaurante</a>
-    <a href="https://www.hdacoyotes.com/kavala" target="_blank" rel="noopener">Kavala</a>
+    <a href="https://www.kavaladayclub.com" target="_blank" rel="noopener">Kavala</a>
     <a href="https://www.campcoyote.mx" target="_blank" rel="noopener">Campamento</a>
-    <a href="../04-tequilera.html">Tequilera</a>
+    <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener">Tequilera</a>
   </nav>
 </div>
 
@@ -95,6 +112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img class="bg" src="assets/photos/taanah-zona-glamping-aerea.jpg" alt="Vista aérea del complejo" />
   <div class="shell">
     <span class="eyebrow light"><span class="pip"></span>Eventos Corporativos</span>
+    <span class="script md on-dark" style="display:block;margin:6px 0 2px">Hagan equipo</span>
     <h1 class="serif">Reúne a tu equipo <em>lejos de la oficina.</em></h1>
     <p class="lede">Retiros, team building, capacitaciones e integraciones — hospedaje, salones, alimentos y actividades resueltos por un solo proveedor.</p>
   </div>
@@ -122,6 +140,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="cap-cell"><b>100</b><span>Huéspedes en sede</span></div>
       <div class="cap-cell"><b>3</b><span>Espacios para sesiones</span></div>
       <div class="cap-cell"><b>40</b><span>Min. de Guadalajara</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="sec-intro reveal">
+      <span class="eyebrow"><span class="pip"></span>Así se vive</span>
+      <h2 class="serif">Equipos que <em>conectan.</em></h2>
+      <p>De la dinámica al aire libre a la sobremesa junto al lago — momentos reales de grupos que eligieron Taanah.</p>
+    </div>
+    <div class="ev-gallery reveal">
+      <figure class="big cap"><img src="assets/photos/eventos-team-building.jpg" alt="Equipo corporativo reunido en los jardines de Taanah" /><figcaption class="g-cap">Team building entre jardines</figcaption></figure>
+      <figure class="tall cap"><img src="assets/photos/eventos-grupo-restaurante.jpg" alt="Grupo brindando en una comida larga junto al lago" /><figcaption class="g-cap">Comida de grupo junto al lago</figcaption></figure>
+      <figure class="half cap"><img src="assets/photos/eventos-yoga-gazebo.jpg" alt="Sesión de yoga en grupo en el gazebo entre los árboles" /><figcaption class="g-cap">YOGA &amp; BIENESTAR EN EL KIOSCO</figcaption></figure>
+      <figure class="half cap"><img src="assets/photos/eventos-temazcal-grupo.jpg" alt="Grupo previo a entrar al temazcal tradicional" /><figcaption class="g-cap">Ritual de temazcal en grupo</figcaption></figure>
     </div>
   </div>
 </section>
@@ -193,6 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-top">
       <div class="f-brand">
         <img class="f-logo" src="assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+        <span class="script sm on-dark" style="display:block;margin:0 0 14px">Naturaleza con oficio</span>
         <p class="f-tag">Un destino donde te hospedas, comes y la pasas bien sin salir del complejo. A 40 minutos de Guadalajara.</p>
       </div>
       <div class="f-col"><h4>Explorar</h4><ul>
