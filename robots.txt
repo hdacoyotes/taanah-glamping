@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /gracias
+Disallow: /reservas
+
+Sitemap: https://www.taanahglamping.com/sitemap.xml

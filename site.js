@@ -12,7 +12,7 @@
   });
 
   var CLOUDBEDS = 'https://us2.cloudbeds.com/reservation/H9bd0L';
-  var RESERVAS = 'reservas.html';
+  var RESERVAS = '/reservas';
   var TKEY = 'taanah_tweaks_v1';
 
   /* ---- Header + barra de grupo en scroll ---- */
