@@ -100,13 +100,22 @@
     function render() {
       var it = items[idx];
       if (!it) return;
-      lbImg.src = it.src;
-      lbImg.alt = it.alt;
-      lbCap.textContent = it.alt;
-      lbNum.textContent = (idx + 1) + ' / ' + items.length;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        lbImg.src = it.src; lbImg.alt = it.alt;
+        lbCap.textContent = it.alt; lbNum.textContent = (idx + 1) + ' / ' + items.length;
+        return;
+      }
+      lbImg.style.transition = 'opacity 150ms cubic-bezier(0.25, 0.1, 0.25, 1)';
+      lbImg.style.opacity = '0';
+      setTimeout(function () {
+        lbImg.src = it.src; lbImg.alt = it.alt;
+        lbCap.textContent = it.alt; lbNum.textContent = (idx + 1) + ' / ' + items.length;
+        lbImg.style.opacity = '1';
+      }, 150);
     }
     function open(list, i) {
       items = list; idx = i || 0;
+      lbImg.style.opacity = '1';
       render();
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
