@@ -382,6 +382,44 @@ h2 em, h1 em, h3 em { font-style: italic; color: var(--accent); }
 .tp-toggle .tp-label { margin: 0; }
 
 /* ============================================================
+   PROMO BAR · anuncio temporal NYE2027
+   ============================================================ */
+.promo-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 102;
+  height: 36px; background: var(--bronce-2);
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 0 44px;
+  font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--tinta);
+  transition: transform var(--dur-panel) var(--ease-ui);
+}
+.promo-bar[hidden] { display: none; }
+.promo-bar a {
+  color: var(--tinta); font-weight: 600;
+  text-decoration: underline; text-underline-offset: 3px;
+  transition: opacity var(--dur-fast) var(--ease-ui);
+}
+@media (hover: hover) and (pointer: fine) {
+  .promo-bar a:hover { opacity: 0.7; }
+  .promo-bar .pb-close:hover { opacity: 1; }
+}
+.promo-bar .pb-close {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; padding: 6px 8px;
+  color: var(--tinta); opacity: 0.55; font-size: 13px; line-height: 1;
+  transition: opacity var(--dur-fast) var(--ease-ui);
+}
+@media (max-width: 640px) {
+  .promo-bar { font-size: 9px; gap: 6px; padding: 0 36px; }
+}
+body.promo-active .group-bar { top: 36px; }
+body.promo-active .site-header { top: calc(36px + 42px); }
+body.promo-active .site-header.scrolled { top: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .promo-bar { transition: none; }
+}
+
+/* ============================================================
    GRUPO · barra superior de unidades de negocio
    ============================================================ */
 .group-bar {

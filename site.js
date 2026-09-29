@@ -15,6 +15,25 @@
   var RESERVAS = '/reservas';
   var TKEY = 'taanah_tweaks_v1';
 
+  /* ---- Promo bar NYE2027 ---- */
+  (function () {
+    var PKEY = 'taanah_promo_nye2027';
+    var EXPIRY = new Date('2027-01-01T06:00:00-06:00').getTime();
+    var bar = document.getElementById('promo-bar');
+    if (!bar) return;
+    if (Date.now() > EXPIRY) return;
+    if (window.location.pathname.indexOf('NYE2027') !== -1) return;
+    try { if (localStorage.getItem(PKEY) === '1') return; } catch (e) {}
+    bar.removeAttribute('hidden');
+    document.body.classList.add('promo-active');
+    var btn = bar.querySelector('.pb-close');
+    if (btn) btn.addEventListener('click', function () {
+      bar.setAttribute('hidden', '');
+      document.body.classList.remove('promo-active');
+      try { localStorage.setItem(PKEY, '1'); } catch (e) {}
+    });
+  })();
+
   /* ---- Header + barra de grupo en scroll ---- */
   var header = document.querySelector('.site-header');
   var groupBar = document.querySelector('.group-bar');
