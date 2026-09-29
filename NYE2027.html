@@ -160,7 +160,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HERO -->
 <section class="nye-hero">
-  <img class="bg" src="assets/photos/kavala-nye-fuegos.jpg" alt="Fuegos artificiales sobre Kavala en Año Nuevo" fetchpriority="high" />
+  <video class="bg" autoplay muted loop playsinline poster="assets/photos/kavala-nye-fuegos.jpg" aria-hidden="true">
+    <source src="assets/photos/kavala-nye.webm" type="video/webm" />
+    <source src="assets/photos/kavala-nye.mp4" type="video/mp4" />
+  </video>
   <div class="overlay" aria-hidden="true"></div>
   <div class="shell">
     <span class="eyebrow light"><span class="pip"></span>Taanah · Kavala · 31 diciembre 2026</span>
@@ -531,6 +534,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="site.js"></script>
 <script>
+  /* Pause hero video for reduced-motion preference */
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var vid = document.querySelector('.nye-hero video');
+      if (vid) { vid.pause(); }
+    }
+  })();
+
   /* Countdown to Dec 31, 2026 20:30 (start of dinner) */
   (function () {
     var target = new Date('2026-12-31T20:30:00-06:00').getTime();
