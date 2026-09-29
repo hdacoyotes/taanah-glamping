@@ -128,8 +128,8 @@ h2 em, h1 em, h3 em { font-style: italic; color: var(--accent); }
 }
 .nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--pizarra); position: relative; padding: 4px 0; }
-.nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px; background: var(--accent); transition: width var(--dur-ui) var(--ease-out); }
-.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform var(--dur-ui) var(--ease-out); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
 .header-light .logo-dark { display: none; }
 .header-light .nav-links a { color: var(--bone); }
 .header-light:not(.scrolled) .eyebrow { color: var(--bronce-2); }

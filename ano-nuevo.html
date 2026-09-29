@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDNVW42B');</script>
+<!-- End Google Tag Manager -->
+<title>Año Nuevo 2027 · Taanah & Kavala</title>
+<meta name="description" content="Celebra Año Nuevo 2027 en Taanah Hotel & Glamping o Kavala Day Club. Escapada de 2 noches o estancia de 1 noche con botella. Reservas exclusivamente por WhatsApp." />
+<link rel="canonical" href="https://www.taanahglamping.com/ano-nuevo" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.taanahglamping.com/ano-nuevo" />
+<meta property="og:title" content="Año Nuevo 2027 · Taanah & Kavala" />
+<meta property="og:description" content="Dos experiencias únicas para recibir 2027: la escapada glamping de 2 noches en Taanah o la estancia con botella en Kavala. Solo WhatsApp." />
+<meta property="og:image" content="https://www.taanahglamping.com/assets/photos/kavala-venue-pool-hero.jpg" />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:site_name" content="Taanah Hotel & Glamping" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Marcellus&display=swap" />
+<link rel="stylesheet" href="site.css" />
+<style>
+  /* ── Countdown ── */
+  .nye-hero { position: relative; min-height: 96svh; display: flex; align-items: flex-end; padding-bottom: 80px; overflow: hidden; }
+  .nye-hero .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+  .nye-hero .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,8,0.78) 0%, rgba(10,10,8,0.35) 55%, rgba(10,10,8,0.18) 100%); }
+  .nye-hero .shell { position: relative; z-index: 2; }
+  .countdown { display: flex; gap: 24px; margin: 28px 0 36px; }
+  .cd-unit { text-align: center; }
+  .cd-num { font-family: var(--ff-display); font-size: clamp(44px, 8vw, 96px); font-weight: 300; color: var(--bone); line-height: 1; display: block; letter-spacing: -0.02em; }
+  .cd-label { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 8px; display: block; }
+  .cd-sep { font-family: var(--ff-display); font-size: clamp(36px, 6vw, 72px); font-weight: 300; color: rgba(255,255,255,0.3); line-height: 1; align-self: flex-start; padding-top: clamp(4px,0.5vw,10px); }
+  @media (max-width: 600px) { .countdown { gap: 12px; } .cd-sep { display: none; } }
+
+  /* ── Tariff tables ── */
+  .tariff { border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+  .tariff-head { display: grid; grid-template-columns: 1fr auto auto; gap: 0; background: var(--pizarra); }
+  .tariff-head span { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); padding: 14px 20px; }
+  .tariff-head span:nth-child(2), .tariff-head span:nth-child(3) { text-align: right; }
+  .tariff-row { display: grid; grid-template-columns: 1fr auto auto; gap: 0; border-top: 1px solid var(--line); background: var(--bruma); transition: background var(--dur-ui) var(--ease-ui); }
+  .tariff-row:hover { background: color-mix(in oklch, var(--bruma) 80%, var(--accent) 20%); }
+  .tariff-row span { padding: 14px 20px; font-size: 14px; color: var(--pizarra); display: flex; align-items: center; }
+  .tariff-row span:nth-child(2) { color: var(--pizarra-2); font-size: 13px; justify-content: flex-end; }
+  .tariff-row .price { font-family: var(--ff-display); font-size: 20px; font-weight: 500; color: var(--accent); justify-content: flex-end; }
+  .tariff-row.best { background: color-mix(in oklch, var(--bruma) 60%, color-mix(in oklch, var(--accent) 15%, transparent) 40%); }
+  .tariff-row.best .room { font-weight: 600; }
+  @media (max-width: 600px) {
+    .tariff-head { grid-template-columns: 1fr auto; }
+    .tariff-head span:nth-child(2) { display: none; }
+    .tariff-row { grid-template-columns: 1fr auto; }
+    .tariff-row span:nth-child(2) { display: none; }
+  }
+
+  /* ── Kavala tariff (2-col: only room + price) ── */
+  .tariff-sm .tariff-head { grid-template-columns: 1fr auto; }
+  .tariff-sm .tariff-row { grid-template-columns: 1fr auto; }
+  .tariff-sm .tariff-head span:nth-child(2) { text-align: right; }
+
+  /* ── Includes list ── */
+  .includes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; list-style: none; margin: 0; }
+  @media (max-width: 640px) { .includes { grid-template-columns: 1fr; } }
+  .includes li { font-size: 14px; padding-left: 22px; position: relative; color: var(--pizarra); line-height: 1.45; }
+  .includes li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+  .includes.on-dark li { color: rgba(255,255,255,0.88); }
+  .includes.on-dark li::before { color: var(--bronce-2); }
+
+  /* ── Bottle list ── */
+  .bottle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 16px; }
+  .bottle-chip { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--r-sm); padding: 10px 14px; font-size: 12.5px; color: rgba(255,255,255,0.78); text-align: center; line-height: 1.35; }
+
+  /* ── Access cards ── */
+  .access-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .access-row { grid-template-columns: 1fr; } }
+  .access-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px 28px; background: var(--bruma); }
+  .access-card .price-big { font-family: var(--ff-display); font-size: 54px; font-weight: 400; color: var(--accent); line-height: 1; margin: 12px 0 4px; }
+  .access-card .per { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pizarra-2); margin-bottom: 18px; }
+
+  /* ── Timeline ── */
+  .timeline { display: grid; gap: 0; }
+  .tl-item { display: grid; grid-template-columns: 100px 1fr; gap: 0; position: relative; }
+  .tl-item::before { content: ""; position: absolute; left: 99px; top: 28px; bottom: 0; width: 1px; background: var(--line); }
+  .tl-item:last-child::before { display: none; }
+  .tl-time { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--bronce-2); padding: 22px 20px 22px 0; text-align: right; }
+  .tl-body { border-left: 1px solid var(--line); padding: 18px 0 18px 28px; position: relative; }
+  .tl-dot { position: absolute; left: -5px; top: 26px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--pizarra); }
+  .tl-body h4 { font-size: 16px; font-weight: 600; color: var(--bone); margin-bottom: 2px; }
+  .tl-body p { font-size: 13px; color: rgba(255,255,255,0.6); margin: 0; }
+
+  /* ── Policies accordion ── */
+  .accordion { border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+  .accordion details { border-top: 1px solid var(--line); }
+  .accordion details:first-child { border-top: none; }
+  .accordion summary { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--pizarra); padding: 18px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; background: var(--bruma); user-select: none; }
+  .accordion summary::-webkit-details-marker { display: none; }
+  .accordion summary::after { content: "+"; font-size: 18px; color: var(--pizarra-2); font-weight: 300; transition: transform var(--dur-ui) var(--ease-ui); }
+  .accordion details[open] summary::after { transform: rotate(45deg); }
+  .accordion details[open] summary { background: color-mix(in oklch, var(--bruma) 75%, var(--lino) 25%); }
+  .accordion .ac-body { padding: 20px; background: var(--bruma); font-size: 14px; color: var(--pizarra); line-height: 1.6; }
+  .accordion .ac-body p { margin: 0 0 10px; }
+  .accordion .ac-body p:last-child { margin: 0; }
+  .pol-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .pol-table th { font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pizarra-2); border-bottom: 1px solid var(--line); padding: 8px 12px 8px 0; text-align: left; }
+  .pol-table td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--pizarra); }
+  .pol-table tr:last-child td { border-bottom: none; }
+
+  /* ── CTA final ── */
+  .cta-wrap { text-align: center; }
+  .cta-wrap .btn + .btn { margin-left: 12px; }
+  @media (max-width: 520px) { .cta-wrap .btn + .btn { margin-left: 0; margin-top: 10px; } .cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; } .cta-wrap .btn + .btn { margin-left: 0; margin-top: 0; } }
+
+  /* ── No-botella badge ── */
+  .note-badge { display: inline-flex; align-items: center; gap: 7px; font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pizarra-2); background: var(--lino); border: 1px solid var(--line); border-radius: 100px; padding: 6px 14px; }
+  .note-badge.featured { color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
+
+  /* ── Responsive adjustments ── */
+  @media (prefers-reduced-motion: reduce) {
+    .countdown { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDNVW42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<!-- BARRA DE GRUPO -->
+<div class="group-bar">
+  <img class="gb-logo" src="assets/brand/logo-hc.png" alt="Grupo Hacienda Coyotes" />
+  <nav class="gb-units">
+    <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener noreferrer">Inicio</a>
+    <a href="https://www.hdacoyotes.com/restaurante/" target="_blank" rel="noopener noreferrer">Restaurante</a>
+    <a href="https://www.kavaladayclub.com" target="_blank" rel="noopener noreferrer">Kavala</a>
+    <a href="https://www.campcoyote.mx" target="_blank" rel="noopener noreferrer">Campamento</a>
+    <a href="https://www.hdacoyotes.com/" target="_blank" rel="noopener noreferrer">Tequilera</a>
+  </nav>
+</div>
+
+<header class="site-header header-light">
+  <a href="/" aria-label="Taanah">
+    <img class="logo logo-light" src="assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+    <img class="logo logo-dark" src="assets/brand/logo-taanah-2026-tinta.png" alt="Taanah" />
+  </a>
+  <nav class="site-nav">
+    <ul class="nav-links">
+      <li><a href="/habitaciones">Habitaciones</a></li>
+      <li><a href="/experiencias">Experiencias</a></li>
+      <li><a href="/eventos">Eventos</a></li>
+      <li><a href="/#restaurante">Restaurante</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-primary" href="https://wa.me/523316990962?text=Hola%2C%20me%20interesa%20el%20Año%20Nuevo%202027%20en%20Taanah%20o%20Kavala.%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Reservar</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="nye-hero">
+  <img class="bg" src="assets/photos/kavala-venue-pool-hero.jpg" alt="Kavala Day Club de noche" fetchpriority="high" />
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="shell">
+    <span class="eyebrow light"><span class="pip"></span>Taanah · Kavala · 31 diciembre 2026</span>
+    <span class="script lg on-dark" style="display:block;margin:10px 0 4px">La noche del año</span>
+    <h1 class="serif" style="color:var(--bone);font-size:clamp(38px,6vw,80px);max-width:14ch">Año Nuevo <em>2027.</em></h1>
+    <p class="lede" style="color:rgba(255,255,255,0.78);max-width:50ch;margin:16px 0 0">Glamping de dos noches, estancia con botella o solo la fiesta con DJs hasta las 3&nbsp;am. Las reservas son exclusivamente por WhatsApp.</p>
+    <div class="countdown" aria-label="Cuenta regresiva al 31 de diciembre">
+      <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-label">Días</span></div>
+      <span class="cd-sep" aria-hidden="true">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-label">Horas</span></div>
+      <span class="cd-sep" aria-hidden="true">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-label">Min</span></div>
+      <span class="cd-sep" aria-hidden="true">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-label">Seg</span></div>
+    </div>
+    <a class="btn btn-primary btn-lg" href="https://wa.me/523316990962?text=Hola%2C%20me%20interesa%20el%20Año%20Nuevo%202027%20en%20Taanah%20o%20Kavala.%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECCIÓN 1 · TAANAH NYE ESCAPE
+════════════════════════════════════ -->
+<section class="section" id="taanah-escape">
+  <div class="shell">
+    <div class="split" style="align-items:start;gap:clamp(32px,5vw,80px)">
+      <div class="reveal" style="flex:1 1 38%">
+        <span class="eyebrow"><span class="pip"></span>Taanah NYE Escape</span>
+        <h2 class="serif" style="font-size:clamp(30px,4vw,52px);margin:14px 0 18px">Dos noches <em>para que no falte nada.</em></h2>
+        <p style="color:var(--pizarra-2);font-size:15px;line-height:1.6;margin-bottom:24px">Elige entre el 30&nbsp;dic–1&nbsp;ene o el 31&nbsp;dic–2&nbsp;ene. Las dos noches incluyen las cenas y desayunos de tu estancia; la cena del 31 es el buffet especial de Año Nuevo.</p>
+        <ul class="includes" style="margin-bottom:28px">
+          <li>Cena buffet de Año Nuevo</li>
+          <li>Desayunos incluidos</li>
+          <li>Acceso a Kavala NYE 2027</li>
+          <li>Mesa reservada en Kavala</li>
+          <li>Copa de espumoso para el brindis</li>
+          <li>DJs de 21:00 a 03:00</li>
+          <li>Countdown a las 23:55</li>
+          <li>Uvas de Año Nuevo</li>
+        </ul>
+        <span class="note-badge">Sin botella incluida</span>
+        <div style="margin-top:28px">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/523316990962?text=Hola%2C%20me%20interesa%20el%20TAANAH%20NYE%20ESCAPE%20(Año%20Nuevo%202027).%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="reveal" style="flex:1 1 55%">
+        <div class="tariff" aria-label="Tarifas Taanah NYE Escape">
+          <div class="tariff-head">
+            <span>Alojamiento</span>
+            <span>Personas</span>
+            <span>Total 2 noches</span>
+          </div>
+          <div class="tariff-row best">
+            <span class="room">Kavala Glamping Tent</span>
+            <span>2 personas</span>
+            <span class="price">$5,800</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Luna Glamping Tent</span>
+            <span>2 personas</span>
+            <span class="price">$6,200</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Habitación Estándar</span>
+            <span>2 personas</span>
+            <span class="price">$6,600</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Deluxe Glamping Tent</span>
+            <span>2 personas</span>
+            <span class="price">$7,000</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Tuunich Glamping Suite</span>
+            <span>2 personas</span>
+            <span class="price">$7,800</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Habitación Doble</span>
+            <span>4 personas</span>
+            <span class="price">$9,600</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Luna Glamping Tent</span>
+            <span>4 personas</span>
+            <span class="price">$10,400</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Tuunich Glamping Suite</span>
+            <span>4 personas</span>
+            <span class="price">$12,000</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Cabaña El Camino</span>
+            <span>6 personas</span>
+            <span class="price">$13,600</span>
+          </div>
+          <div class="tariff-row">
+            <span class="room">Cabaña El Camino</span>
+            <span>8 personas</span>
+            <span class="price">$17,800</span>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--pizarra-2);margin-top:12px;line-height:1.5">Precios en pesos mexicanos, por habitación. Disponibilidad sujeta a confirmación. Reservas exclusivamente por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECCIÓN 2 · KAVALA NYE STAY
+════════════════════════════════════ -->
+<section class="section tinta" id="kavala-stay">
+  <div class="shell">
+    <div class="split" style="align-items:start;gap:clamp(32px,5vw,80px)">
+      <div class="reveal" style="flex:1 1 55%;order:2">
+        <div class="tariff tariff-sm" aria-label="Tarifas Kavala NYE Stay Experience">
+          <div class="tariff-head" style="background:rgba(255,255,255,0.07)">
+            <span style="color:rgba(255,255,255,0.5)">Alojamiento</span>
+            <span style="color:rgba(255,255,255,0.5)">Total pareja</span>
+          </div>
+          <div class="tariff-row best" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)">
+            <span class="room" style="color:var(--bone)">Kavala Glamping Tent</span>
+            <span class="price" style="color:var(--bronce-2)">$4,700</span>
+          </div>
+          <div class="tariff-row" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.08)">
+            <span class="room" style="color:rgba(255,255,255,0.88)">Luna Glamping Tent</span>
+            <span class="price" style="color:var(--bronce-2)">$4,900</span>
+          </div>
+          <div class="tariff-row" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.08)">
+            <span class="room" style="color:rgba(255,255,255,0.88)">Habitación Estándar</span>
+            <span class="price" style="color:var(--bronce-2)">$5,100</span>
+          </div>
+          <div class="tariff-row" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.08)">
+            <span class="room" style="color:rgba(255,255,255,0.88)">Deluxe Glamping Tent</span>
+            <span class="price" style="color:var(--bronce-2)">$5,300</span>
+          </div>
+          <div class="tariff-row" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.08)">
+            <span class="room" style="color:rgba(255,255,255,0.88)">Tuunich Glamping Suite</span>
+            <span class="price" style="color:var(--bronce-2)">$5,700</span>
+          </div>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:12px;line-height:1.5">Para 2 adultos. Precio por habitación. Reservas solo por WhatsApp.</p>
+
+        <!-- Botella -->
+        <div style="margin-top:32px">
+          <p style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--bronce-2);margin-bottom:12px">Botellas participantes</p>
+          <div class="bottle-grid">
+            <div class="bottle-chip">Dobel Blanco</div>
+            <div class="bottle-chip">Dobel Tahona</div>
+            <div class="bottle-chip">Herradura Plata</div>
+            <div class="bottle-chip">Herradura Cristal</div>
+            <div class="bottle-chip">7 Leguas Blanco</div>
+            <div class="bottle-chip">Patrón Silver</div>
+            <div class="bottle-chip">Patrón Cristalino</div>
+            <div class="bottle-chip">Stolichnaya</div>
+            <div class="bottle-chip">Bombay</div>
+            <div class="bottle-chip">Tanqueray</div>
+            <div class="bottle-chip">Jack Daniel's</div>
+            <div class="bottle-chip">Chandon Brut</div>
+            <div class="bottle-chip">HC Blanco</div>
+            <div class="bottle-chip">Jägermeister</div>
+          </div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:10px">Sujeta a disponibilidad. No se garantiza etiqueta específica.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="flex:1 1 38%;order:1">
+        <span class="eyebrow light"><span class="pip"></span>Kavala NYE Stay Experience</span>
+        <h2 class="serif" style="color:var(--bone);font-size:clamp(30px,4vw,52px);margin:14px 0 18px">Una noche, <em>con botella.</em></h2>
+        <p style="color:rgba(255,255,255,0.72);font-size:15px;line-height:1.6;margin-bottom:24px">Del 31 de diciembre al 1 de enero, para dos adultos. La estancia incluye todo lo que necesitas para recibir el año sin preocuparte de nada — ni de la botella.</p>
+        <ul class="includes on-dark" style="margin-bottom:28px">
+          <li>1 noche (31 dic–1 ene)</li>
+          <li>Cena buffet de Año Nuevo</li>
+          <li>Acceso a Kavala NYE 2027</li>
+          <li>Mesa reservada en Kavala</li>
+          <li>Botella 750 ml + 5 mezcladores</li>
+          <li>Copa de espumoso + uvas</li>
+          <li>Countdown a las 23:55</li>
+          <li>Desayuno el 1 de enero</li>
+        </ul>
+        <span class="note-badge featured">Solo para parejas (2 adultos)</span>
+        <div style="margin-top:28px">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/523316990962?text=Hola%2C%20me%20interesa%20el%20KAVALA%20NYE%20STAY%20EXPERIENCE%20(Año%20Nuevo%202027).%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECCIÓN 3 · ACCESOS SIN HOSPEDAJE
+════════════════════════════════════ -->
+<section class="section alt" id="accesos">
+  <div class="shell">
+    <div class="sec-intro center reveal">
+      <span class="eyebrow"><span class="pip"></span>Solo la fiesta</span>
+      <h2 class="serif">Accesos Kavala NYE <em>sin hospedaje.</em></h2>
+      <p style="max-width:52ch;margin:0 auto">¿Ya tienes dónde quedarte? Entra a la fiesta y celebra con DJs, countdown y brindis.</p>
+    </div>
+    <div class="access-row">
+      <div class="access-card reveal">
+        <span class="eyebrow" style="font-size:10px">Kavala NYE Party</span>
+        <div class="price-big">$300</div>
+        <p class="per">por persona</p>
+        <ul class="includes" style="margin-bottom:24px">
+          <li>Acceso a Kavala NYE 2027</li>
+          <li>DJs de 21:00 a 03:00</li>
+          <li>Countdown a las 23:55</li>
+          <li>Uvas y copa de espumoso</li>
+        </ul>
+        <p style="font-size:12.5px;color:var(--pizarra-2);margin-bottom:20px">Sin cena. Pueden entrar desde las 21:00.</p>
+        <a class="btn btn-dark" href="https://wa.me/523316990962?text=Hola%2C%20quiero%20accesos%20para%20KAVALA%20NYE%20PARTY%202027%20($300%2Fpersona).%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+      </div>
+      <div class="access-card reveal">
+        <span class="eyebrow" style="font-size:10px">Kavala NYE Dinner + Party</span>
+        <div class="price-big">$600</div>
+        <p class="per">por persona</p>
+        <ul class="includes" style="margin-bottom:24px">
+          <li>Cena buffet de Año Nuevo</li>
+          <li>Acceso a Kavala NYE 2027</li>
+          <li>DJs de 21:00 a 03:00</li>
+          <li>Countdown a las 23:55</li>
+          <li>Uvas y copa de espumoso</li>
+        </ul>
+        <p style="font-size:12.5px;color:var(--pizarra-2);margin-bottom:20px">Cena buffet de 20:30 a 22:30 en Restaurante Hacienda Coyotes.</p>
+        <a class="btn btn-primary" href="https://wa.me/523316990962?text=Hola%2C%20quiero%20accesos%20para%20KAVALA%20NYE%20DINNER%20+%20PARTY%202027%20($600%2Fpersona).%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--pizarra-2);margin-top:20px">Los accesos sin hospedaje no incluyen mesa reservada. El evento es para mayores de edad.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECCIÓN 4 · PROGRAMA DEL 31
+════════════════════════════════════ -->
+<section class="section tinta">
+  <div class="shell">
+    <div class="split" style="align-items:start;gap:clamp(32px,5vw,72px)">
+      <div class="reveal" style="flex:1 1 42%">
+        <span class="eyebrow light"><span class="pip"></span>31 de diciembre 2026</span>
+        <h2 class="serif" style="color:var(--bone);font-size:clamp(28px,3.6vw,48px);margin:14px 0 10px">La noche, <em>hora a hora.</em></h2>
+        <p style="color:rgba(255,255,255,0.65);font-size:14.5px;line-height:1.6">La cena y la fiesta se superponen: si tienes acceso solo de fiesta puedes entrar a Kavala desde las 21:00.</p>
+      </div>
+      <div class="reveal" style="flex:1 1 52%">
+        <div class="timeline">
+          <div class="tl-item">
+            <span class="tl-time">20:30–22:30</span>
+            <div class="tl-body">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <h4>Cena buffet de Año Nuevo</h4>
+              <p>Restaurante Hacienda Coyotes</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">21:00–03:00</span>
+            <div class="tl-body">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <h4>KAVALA NYE 2027 · DJs</h4>
+              <p>Kavala Day Club — acceso incluido en todos los paquetes</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">23:55</span>
+            <div class="tl-body">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <h4>Countdown &amp; brindis</h4>
+              <p>Uvas y copa de espumoso para recibir 2027</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">07:00–10:30</span>
+            <div class="tl-body">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <h4>Desayuno · 1 de enero</h4>
+              <p>Para huéspedes con estancia (Taanah Escape y Kavala Stay)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECCIÓN 5 · POLÍTICAS
+════════════════════════════════════ -->
+<section class="section">
+  <div class="shell">
+    <div class="sec-intro reveal">
+      <span class="eyebrow"><span class="pip"></span>Condiciones</span>
+      <h2 class="serif">Lo que debes <em>saber antes de reservar.</em></h2>
+    </div>
+    <div class="accordion reveal">
+      <details>
+        <summary>Política de cancelación</summary>
+        <div class="ac-body">
+          <p>Aplican condiciones especiales para los eventos del 31 de diciembre 2026. Los plazos se calculan respecto al inicio de la cena a las 20:30 del 31 de diciembre.</p>
+          <table class="pol-table">
+            <thead><tr><th>Plazo</th><th>Condición</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hasta el 30 nov 2026, 23:59</strong></td><td>Cancelación sin cargo; devolución del pago conforme al medio indicado en la reserva.</td></tr>
+              <tr><td><strong>1 dic – 29 dic antes de 20:30</strong></td><td>Sin reembolso. A elección del cliente: cambio de fecha para otro servicio disponible o voucher por el importe pagado (vigencia 12 meses).</td></tr>
+              <tr><td><strong>Desde las 20:30 del 29 dic o no presentación</strong></td><td>Sin cambios, sin voucher. El pago se aplica a la reserva.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <details>
+        <summary>Fechas y check-in</summary>
+        <div class="ac-body">
+          <p>Check-in desde las 15:00; check-out antes de las 12:00. Early check-in y late check-out sujetos a disponibilidad; el sitio publica cargo de $500 por late check-out.</p>
+          <p>Taanah NYE Escape incluye dos noches consecutivas (elige 30 dic–1 ene o 31 dic–2 ene). Kavala NYE Stay Experience es solo la noche del 31 de diciembre al 1 de enero.</p>
+          <p>Depósito en garantía al check-in de $1,000 en efectivo o voucher abierto de tarjeta; devolución o liberación al check-out tras revisión.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Condiciones especiales del evento</summary>
+        <div class="ac-body">
+          <p>Los precios son por habitación conforme a la ocupación indicada. Ocupación distinta, menores en alojamiento o huéspedes adicionales se cotizan individualmente.</p>
+          <p>La mesa reservada en Kavala es de ubicación asignada por el equipo de Kavala; no implica zona VIP ni consumo mínimo.</p>
+          <p>Los accesos sin hospedaje (Party y Dinner+Party) no incluyen mesa reservada.</p>
+          <p>En Kavala Stay, la botella de 750 ml es una por habitación (no por persona). Consumos adicionales se cobran aparte. El evento es para mayores de edad.</p>
+          <p>Fogata, temazcal, masajes, actividades adicionales y botellas extra tienen costo adicional no señalado en estos paquetes.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     CTA FINAL
+════════════════════════════════════ -->
+<section class="section tinta">
+  <div class="shell" style="text-align:center;max-width:620px">
+    <span class="script md on-dark" style="display:block;margin-bottom:8px">¿Lista la reserva?</span>
+    <h2 class="serif" style="color:var(--bone);font-size:clamp(30px,4.5vw,56px);margin-bottom:16px">Reservaciones <em>solo por WhatsApp.</em></h2>
+    <p style="color:rgba(255,255,255,0.68);font-size:15px;max-width:44ch;margin:0 auto 36px">Disponibilidad limitada por tipo de alojamiento. Confirmamos fechas, ocupación y condiciones por escrito antes del pago.</p>
+    <div class="cta-wrap">
+      <a class="btn btn-primary btn-lg" href="https://wa.me/523316990962?text=Hola%2C%20me%20interesa%20el%20TAANAH%20NYE%20ESCAPE%20(Año%20Nuevo%202027).%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Taanah NYE Escape</a>
+      <a class="btn btn-lg" style="background:rgba(255,255,255,0.1);color:var(--bone);border:1px solid rgba(255,255,255,0.2)" href="https://wa.me/523316990962?text=Hola%2C%20me%20interesa%20el%20KAVALA%20NYE%20STAY%20EXPERIENCE%20(Año%20Nuevo%202027).%20¿Tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer">Kavala Stay</a>
+    </div>
+    <p style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:28px">+52 33 1699 0962 · WhatsApp</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="f-brand">
+        <img class="f-logo" src="assets/brand/logo-taanah-2026-bone.png" alt="Taanah" />
+        <span class="script sm on-dark" style="display:block;margin:0 0 14px">Naturaleza con oficio</span>
+        <p class="f-tag">Un destino donde te hospedas, comes y la pasas bien sin salir del complejo. A 40 minutos de Guadalajara.</p>
+      </div>
+      <div class="f-col"><h4>Explorar</h4><ul>
+        <li><a href="/habitaciones">Habitaciones</a></li><li><a href="/experiencias">Experiencias</a></li><li><a href="/eventos">Eventos</a></li><li><a href="/#restaurante">Restaurante</a></li>
+      </ul></div>
+      <div class="f-col"><h4>Visítanos</h4><ul>
+        <li><a href="/contacto">Contacto</a></li><li><a href="/contacto">Cómo llegar</a></li><li><a href="/contacto">FAQ</a></li><li><a href="/ano-nuevo">Año Nuevo 2027</a></li>
+      </ul></div>
+      <div class="f-col"><h4>Contacto</h4><ul>
+        <li><p><a href="mailto:hotel@hdacoyotes.com">hotel@hdacoyotes.com</a></p></li><li><p>+52 33 2101 2205</p></li><li><p><a href="https://wa.me/523316990962" target="_blank" rel="noopener noreferrer">WhatsApp +52 33 1699 0962</a></p></li><li><p>15 Km Carr. Zapotlanejo - Tototlán</p></li><li><p>Zapotlanejo, Jalisco</p></li><li><p><a href="https://instagram.com/taanah_glamping" target="_blank" rel="noopener noreferrer">@taanah_glamping</a></p></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Taanah Hotel & Glamping · Grupo Hacienda Coyotes</p><p><a href="https://www.hdacoyotes.com/aviso-de-privacidad/" target="_blank" rel="noopener noreferrer">Aviso de privacidad</a> · <a href="https://instagram.com/taanah_glamping" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.facebook.com/haciendacoyotes" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://wa.me/523316990962" target="_blank" rel="noopener noreferrer">WhatsApp</a></p></div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+  /* Countdown to Dec 31, 2026 20:30 (start of dinner) */
+  (function () {
+    var target = new Date('2026-12-31T20:30:00-06:00').getTime();
+    var dEl = document.getElementById('cd-d');
+    var hEl = document.getElementById('cd-h');
+    var mEl = document.getElementById('cd-m');
+    var sEl = document.getElementById('cd-s');
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    function tick() {
+      var now = Date.now();
+      var diff = target - now;
+      if (diff <= 0) {
+        dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00';
+        return;
+      }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      dEl.textContent = d;
+      hEl.textContent = pad(h);
+      mEl.textContent = pad(m);
+      sEl.textContent = pad(s);
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>
+</body>
+</html>
