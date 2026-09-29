@@ -113,6 +113,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cta-wrap .btn + .btn { margin-left: 12px; }
   @media (max-width: 520px) { .cta-wrap .btn + .btn { margin-left: 0; margin-top: 10px; } .cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; } .cta-wrap .btn + .btn { margin-left: 0; margin-top: 0; } }
 
+  /* ── Photo mosaic ── */
+  .nye-mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 260px 260px; gap: 6px; border-radius: var(--r-md); overflow: hidden; }
+  .nye-mosaic figure { margin: 0; position: relative; overflow: hidden; }
+  .nye-mosaic figure img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) {
+    .nye-mosaic figure:hover img { transform: scale(1.06); }
+  }
+  .nye-mosaic .cap { position: absolute; left: 14px; bottom: 12px; right: 14px; color: rgba(255,255,255,0.88); font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+  .nye-mosaic figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,8,0.5) 0%, rgba(10,10,8,0) 45%); pointer-events: none; }
+  @media (max-width: 640px) { .nye-mosaic { grid-template-rows: 180px 180px; gap: 4px; } }
+
   /* ── No-botella badge ── */
   .note-badge { display: inline-flex; align-items: center; gap: 7px; font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pizarra-2); background: var(--lino); border: 1px solid var(--line); border-radius: 100px; padding: 6px 14px; }
   .note-badge.featured { color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
@@ -267,6 +278,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <p style="font-size:12px;color:var(--pizarra-2);margin-top:12px;line-height:1.5">Precios en pesos mexicanos, por habitación. Disponibilidad sujeta a confirmación. Reservas exclusivamente por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     GALERÍA · GLAMPING DE NOCHE
+════════════════════════════════════ -->
+<section class="section tight" style="padding-top:0">
+  <div class="shell">
+    <div class="split" style="align-items:start;gap:clamp(24px,4vw,60px)">
+      <div class="reveal" style="flex:1 1 44%">
+        <span class="eyebrow"><span class="pip"></span>Tu refugio para la noche</span>
+        <h2 class="serif" style="font-size:clamp(26px,3.4vw,44px);margin:14px 0 16px">Duerme aquí, <em>festeja allá.</em></h2>
+        <p style="color:var(--pizarra-2);font-size:15px;line-height:1.6">A metros de Kavala, con cama preparada para cuando decidas retirarte. El glamping y la fiesta comparten el mismo predio.</p>
+      </div>
+      <div class="reveal" style="flex:1 1 52%">
+        <div class="nye-mosaic" data-gallery>
+          <figure>
+            <img loading="lazy" src="assets/photos/taanah-aldea-atardecer.jpg" alt="Aldea de glamping A-frames al atardecer con string lights" />
+            <span class="cap">La aldea · 31 de diciembre</span>
+          </figure>
+          <figure>
+            <img loading="lazy" src="assets/photos/kavala-aframe-interior.jpg" alt="Interior Kavala Glamping Tent con iluminación cálida" />
+            <span class="cap">Kavala Glamping Tent</span>
+          </figure>
+          <figure>
+            <img loading="lazy" src="assets/photos/tuunich-interior-cama.jpg" alt="Recámara Tuunich Glamping Suite con focos Edison y madera" />
+            <span class="cap">Tuunich Glamping Suite</span>
+          </figure>
+          <figure>
+            <img loading="lazy" src="assets/photos/kavala-venue-pool-hero.jpg" alt="Kavala Day Club de noche con iluminación de piscina" />
+            <span class="cap">Kavala · a pasos de tu cuarto</span>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
