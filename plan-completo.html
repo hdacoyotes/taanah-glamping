@@ -519,7 +519,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var update = function () { sticky.classList.toggle('hide', visible.hero || visible.stage); };
     sticky.classList.add('hide');
     new IntersectionObserver(function (e) { visible.hero = e[0].isIntersecting; update(); }, { threshold: 0.2 }).observe(heroCta);
-    new IntersectionObserver(function (e) { visible.stage = e[0].isIntersecting; update(); }, { threshold: 0.15 }).observe(stage);
+    /* El motor mide ~2,500 px: basta con que se vea una parte para esconder la barra fija y no tapar su botón de continuar */
+    new IntersectionObserver(function (e) { visible.stage = e[0].isIntersecting; update(); }, { threshold: 0 }).observe(stage);
   }
 })();
 </script>
