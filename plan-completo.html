@@ -470,9 +470,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 /* ============================================================
    Medición de la landing · pixel de Taanah (1636411667413975)
-   El GTM del sitio solo envía PageView y Purchase (en /gracias).
-   Aquí se agregan los eventos de embudo que faltaban, usando el
-   mismo pixel que GTM inicializa. fbq se espera hasta 10 s.
+   Cloudbeds envía AddToCart, InitiateCheckout y Purchase; el GTM,
+   PageView. Aquí solo se agregan ViewContent y Contact, que nadie
+   más envía, usando el mismo pixel que GTM inicializa.
+   fbq se espera hasta 10 s.
    ============================================================ */
 (function () {
   'use strict';
@@ -506,24 +507,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 
-  /* InitiateCheckout: primera interacción con el motor de reservas */
+  /* El motor de reservas (Cloudbeds) ya envía AddToCart, InitiateCheckout y Purchase por su cuenta:
+     no se duplican aquí. */
   var stage = document.getElementById('booking-stage');
-  var started = false;
-  function checkoutStarted() {
-    if (started) return;
-    started = true;
-    track('InitiateCheckout', CONTENT, 'plan_completo_checkout');
-  }
-  if (stage) {
-    stage.addEventListener('pointerdown', checkoutStarted);
-    /* Si el motor corre en un iframe, el clic no sube al documento: el foco sí cambia */
-    window.addEventListener('blur', function () {
-      setTimeout(function () {
-        var ae = document.activeElement;
-        if (ae && stage.contains(ae)) checkoutStarted();
-      }, 0);
-    });
-  }
 
   /* Barra fija móvil: aparece al pasar el hero y se oculta al ver el motor de reservas */
   var sticky = document.getElementById('sticky-cta');
