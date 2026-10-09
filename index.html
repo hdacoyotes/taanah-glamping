@@ -26,6 +26,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Marcellus&display=swap" />
 <link rel="preload" as="image" href="assets/video/taanah-hero-poster.jpg" fetchpriority="high" />
 <script defer type="text/javascript" data-cookieconsent="ignore" src="https://static1.cloudbeds.com/booking-engine/latest/static/js/immersive-experience/cb-immersive-experience.js"></script>
+<style>
+  /* Franja "¿Cuándo vienes?" · entre semana vs fin de semana */
+  .wk-cards { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 860px) { .wk-cards { grid-template-columns: 1fr; } }
+  .wk-cards .seg-card { min-height: 540px; }
+  .wk-cards .seg-card::after { background: linear-gradient(180deg, rgba(37,35,30,0.35) 0%, rgba(37,35,30,0.62) 40%, rgba(37,35,30,0.92) 100%); }
+  .wk-cards .eyebrow.light { color: var(--accent-img); text-shadow: 0 1px 12px rgba(20,17,14,0.7); }
+  .wk-cards .inner h3 { text-shadow: 0 1px 18px rgba(20,17,14,0.55); }
+  .wk-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 9px; max-width: 46ch; }
+  .wk-list li { position: relative; padding-left: 22px; font-size: 14.5px; line-height: 1.45; color: rgba(255,255,255,0.92); }
+  .wk-list li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-img); font-weight: 700; }
+  .wk-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin: 2px 0 22px; }
+  .wk-price .l, .wk-price .u { font-family: var(--ff-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.82); }
+  .wk-price b { font-family: var(--ff-display); font-size: 46px; font-weight: 400; line-height: 1; color: var(--bone); font-variant-numeric: tabular-nums; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -129,6 +144,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="booking-note">Reservas seguras · motor Cloudbeds · confirmación inmediata · cancelación sin costo hasta 48 h antes · <a href="/politicas" style="color:inherit;text-decoration:underline">Políticas de hospedaje</a></p>
   </div>
 </div>
+
+<!-- FRANJA · ENTRE SEMANA vs FIN DE SEMANA -->
+<section class="section tight" id="cuando-venir">
+  <div class="shell">
+    <div class="sec-intro center reveal" style="margin-bottom:36px">
+      <span class="eyebrow"><span class="pip"></span>¿Cuándo vienes?</span>
+      <h2 class="serif" style="font-size:clamp(30px,4vw,52px);margin:16px 0 14px">Dos ritmos, <em>un mismo lugar.</em></h2>
+      <p>Entre semana, calma y privacidad. El fin de semana, el complejo cobra vida. Elige el que va contigo.</p>
+    </div>
+    <div class="seg-cards wk-cards">
+      <article class="seg-card reveal">
+        <img loading="lazy" src="assets/photos/deluxe-tienda-hamaca.jpg" alt="Glamping Deluxe sobre su plataforma de madera, con hamaca" />
+        <div class="inner">
+          <span class="eyebrow light"><span class="pip"></span>Lunes a jueves · Calma</span>
+          <h3 class="serif">Entre semana: <em style="color: rgb(215, 203, 179)">privacidad y calma.</em></h3>
+          <ul class="wk-list">
+            <li>Glamping con terraza, baño y regadera privados</li>
+            <li>Cena, desayuno y alberca incluidos</li>
+            <li>Alberca de Kavala Day Club tranquila y exclusiva para huéspedes</li>
+          </ul>
+          <div class="wk-price"><span class="l">Glamping Deluxe desde</span><b>$2,700</b><span class="u">por pareja · por noche</span></div>
+          <a class="btn btn-primary" href="/plan-completo?utm_source=sitio&utm_medium=home&utm_campaign=franja-cuando-vienes&utm_content=entre-semana">Ver el plan entre semana</a>
+        </div>
+      </article>
+      <article class="seg-card reveal">
+        <img loading="lazy" src="assets/photos/kavala-ambiente-alberca.jpg" alt="Grupo de amigos brindando en la alberca de Kavala Day Club un fin de semana" style="object-position:center 40%" />
+        <div class="inner">
+          <span class="eyebrow light"><span class="pip"></span>Viernes a domingo · Ambiente</span>
+          <h3 class="serif">Fin de semana: <em style="color: rgb(211, 199, 172)">el complejo cobra vida.</em></h3>
+          <ul class="wk-list">
+            <li>Kavala Day Club con DJs, música y alberca con ambiente</li>
+            <li>Restaurante y complejo con más visitantes y movimiento</li>
+            <li>Cena, desayuno y alberca incluidos en tu hospedaje</li>
+          </ul>
+          <div class="wk-price"><span class="l">Glamping Deluxe desde</span><b>$3,000</b><span class="u">por pareja · por noche</span></div>
+          <a class="btn btn-ghost on-dark" href="/plan-completo?utm_source=sitio&utm_medium=home&utm_campaign=franja-cuando-vienes&utm_content=fin-de-semana#fin-de-semana">Conocer el fin de semana</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <!-- INTRO / MANIFIESTO -->
 <section class="section tex-wood" style="position:relative;overflow:hidden">
