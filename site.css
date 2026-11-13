@@ -250,6 +250,19 @@ h2 em, h1 em, h3 em { font-style: italic; color: var(--accent); }
 .home-hero.editorial .shell { padding-top: 150px; padding-bottom: 90px; }
 .home-hero.editorial h1 { max-width: 14ch; }
 
+/* Buen Fin 2026 home banner */
+.bf-ribbon { display:flex; justify-content:center; align-items:center; gap:18px; flex-wrap:wrap; padding:13px 20px; background:#d71920; color:#fff; text-align:center; font:500 11px var(--ff-mono); letter-spacing:.08em; text-transform:uppercase; }
+.bf-ribbon strong { font-weight:700; }
+.bf-ribbon-cta { text-decoration:underline; text-underline-offset:3px; }
+.bf-ribbon:active { transform:scale(.99); }
+.bf-home-banner { position: relative; min-height: 280px; display: grid; place-items: center; overflow: hidden; background: var(--tinta); text-align: center; color: white; }
+.bf-home-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .48; }
+.bf-home-copy { position: relative; z-index: 1; padding: 40px 20px; }
+.bf-mark { display: inline-block; padding: 6px 12px; background: #D71920; color: #fff; font: 700 10px var(--ff-mono); letter-spacing: .16em; text-transform: uppercase; }
+.bf-home-copy p { margin: 14px 0 20px; font: 400 clamp(27px,5vw,48px)/1.1 var(--ff-display); }
+.bf-home-copy a { display: inline-flex; gap: 10px; padding: 13px 20px; background: #D71920; color: #fff; font: 600 11px var(--ff-mono); letter-spacing: .1em; text-transform: uppercase; }
+.bf-home-copy a:active { transform: scale(.98); }
+
 /* —— Barra de reserva (Cloudbeds) —— */
 .booking-wrap { position: relative; z-index: 30; margin-top: -46px; }
 .booking-bar {
