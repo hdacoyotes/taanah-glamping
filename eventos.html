@@ -10,14 +10,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KDNVW42B');</script>
 <!-- End Google Tag Manager -->
-<title>Eventos Corporativos · Taanah Hotel & Glamping</title>
-<meta name="description" content="Retiros, team building, capacitaciones e integraciones. Hospedaje, salones, alimentos y actividades con un solo proveedor, a 40 min de Guadalajara." />
+<title>Posadas, convivios y eventos · Taanah Hotel & Glamping</title>
+<meta name="description" content="Celebra tu posada empresarial o convivio familiar en Taanah. Hospedaje, alimentos, espacios y actividades para grupos, a 40 minutos de Guadalajara." />
 <link rel="canonical" href="https://www.taanahglamping.com/eventos" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.taanahglamping.com/eventos" />
-<meta property="og:title" content="Eventos Corporativos · Taanah Hotel & Glamping" />
-<meta property="og:description" content="Retiros, team building, capacitaciones e integraciones. Hospedaje, salones, alimentos y actividades con un solo proveedor, a 40 min de Guadalajara." />
-<meta property="og:image" content="https://www.taanahglamping.com/assets/photos/taanah-zona-glamping-aerea.jpg" />
+<meta property="og:title" content="Posadas y convivios en Taanah" />
+<meta property="og:description" content="Celebra en grupo con hospedaje, alimentos, espacios y actividades en un mismo complejo, a 40 minutos de Guadalajara." />
+<meta property="og:image" content="https://www.taanahglamping.com/assets/photos/posadas-invierno-2026.webp" />
 <meta property="og:locale" content="es_MX" />
 <meta property="og:site_name" content="Taanah Hotel & Glamping" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,6 +59,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .lead-form input::placeholder, .lead-form textarea::placeholder { color: rgba(255,255,255,0.4); }
   .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus { outline: none; border-color: var(--bronce-2); }
   .lead-form option { color: #25231E; }
+  .winter-event-callout { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 30px; align-items: end; padding: clamp(28px,5vw,54px) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .winter-event-callout h2 { max-width: 18ch; margin: 14px 0; font-size: clamp(32px,4.5vw,54px); line-height: 1.06; }
+  .winter-event-callout p { max-width: 62ch; color: var(--pizarra-2); line-height: 1.65; }
+  .form-note { margin: 0; color: rgba(255,255,255,.62); font-size: 12px; line-height: 1.5; }
+  @media (max-width: 720px) { .winter-event-callout { grid-template-columns: 1fr; align-items: start; } .winter-event-callout .btn { justify-self: start; } }
   /* Galería de eventos */
   .ev-gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
   .ev-gallery figure { margin: 0; border-radius: var(--r-md); overflow: hidden; position: relative; background: var(--lino); }
@@ -129,10 +134,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="page-hero">
   <img class="bg" src="assets/photos/taanah-zona-glamping-aerea.jpg" alt="Vista aérea del complejo" fetchpriority="high" />
   <div class="shell">
-    <span class="eyebrow light"><span class="pip"></span>Eventos Corporativos</span>
-    <span class="script md on-dark" style="display:block;margin:6px 0 2px">Hagan equipo</span>
-    <h1 class="serif">Reúne a tu equipo <em>lejos de la oficina.</em></h1>
-    <p class="lede">Retiros, team building, capacitaciones e integraciones — hospedaje, salones, alimentos y actividades resueltos por un solo proveedor.</p>
+    <span class="eyebrow light"><span class="pip"></span>Posadas · convivios · eventos</span>
+    <span class="script md on-dark" style="display:block;margin:6px 0 2px">Todos en un mismo lugar</span>
+    <h1 class="serif">Cierra el año <em>reuniéndolos a todos.</em></h1>
+    <p class="lede">Posadas empresariales, convivios familiares y retiros con hospedaje, alimentos y actividades en el mismo complejo, a 40 minutos de Guadalajara.</p>
+  </div>
+</section>
+
+<section class="section alt" id="posadas">
+  <div class="shell">
+    <div class="winter-event-callout reveal">
+      <div>
+        <span class="eyebrow"><span class="pip"></span>Temporada de invierno</span>
+        <h2 class="serif">Una celebración a tu medida, <em>con espacio para quedarse.</em></h2>
+        <p>Cuéntanos si planeas una posada de empresa o un convivio familiar. Revisaremos fechas, tamaño del grupo y opciones de hospedaje, alimentos y actividades para preparar una propuesta.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="#cotizar" data-track-event="taanah_posadas_quote_start">Cotizar fecha y grupo</a>
+    </div>
   </div>
 </section>
 
@@ -220,21 +238,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="reveal">
         <span class="eyebrow light"><span class="pip"></span>Cotiza tu evento</span>
         <h2 class="serif" style="font-size:clamp(32px,4.4vw,56px);margin:16px 0 18px">Cuéntanos qué <em>necesitas.</em></h2>
-        <p style="color:rgba(255,255,255,0.78);max-width:42ch">Déjanos los datos de tu evento y un coordinador te contacta en menos de 24 horas con una propuesta a medida.</p>
+        <p style="color:rgba(255,255,255,0.78);max-width:42ch">Comparte tus fechas y el tamaño del grupo. Al continuar, abriremos WhatsApp con tu solicitud lista para enviar al equipo.</p>
         <div class="rows" style="margin-top:30px;display:grid;gap:16px">
-          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,0.82);font-size:14px"><span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.14em;color:var(--bronce-2);width:90px">WhatsApp</span> +52 33 2101 2205</div>
+          <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,0.82);font-size:14px"><span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.14em;color:var(--bronce-2);width:90px">WhatsApp</span> <a href="https://wa.me/523316990962" target="_blank" rel="noopener noreferrer" style="color:inherit">+52 33 1699 0962</a></div>
           <div style="display:flex;gap:12px;align-items:center;color:rgba(255,255,255,0.82);font-size:14px"><span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.14em;color:var(--bronce-2);width:90px">TEL</span> +52 33 2101 2205</div>
         </div>
       </div>
-      <form class="lead-form reveal" onsubmit="event.preventDefault(); this.querySelector('.ok').style.display='block';">
-        <div><label for="ev-nombre">Nombre</label><input id="ev-nombre" type="text" placeholder="Tu nombre" required /></div>
-        <div><label for="ev-empresa">Empresa</label><input id="ev-empresa" type="text" placeholder="Empresa" /></div>
-        <div><label for="ev-email">Email</label><input id="ev-email" type="email" placeholder="correo@empresa.com" required /></div>
-        <div><label for="ev-personas">Personas</label><select id="ev-personas"><option>1–20</option><option>21–50</option><option>51–80</option><option>81–120</option></select></div>
-        <div class="full"><label for="ev-formato">Formato</label><select id="ev-formato"><option>Off-site de un día</option><option>Retiro de 2 días</option><option>Otro / a definir</option></select></div>
-        <div class="full"><label for="ev-msg">Mensaje</label><textarea id="ev-msg" rows="3" placeholder="Fechas tentativas y objetivo del evento"></textarea></div>
-        <div class="full"><button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Solicitar propuesta</button></div>
-        <p class="full ok" style="display:none;font-family:var(--ff-mono);font-size:11px;letter-spacing:0.1em;color:var(--bronce-2);text-align:center">✓ ¡Gracias! Te contactamos en menos de 24 h.</p>
+      <form class="lead-form reveal" id="event-quote-form">
+        <div><label for="ev-nombre">Nombre</label><input id="ev-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required /></div>
+        <div><label for="ev-empresa">Empresa o familia</label><input id="ev-empresa" name="grupo" type="text" placeholder="Nombre de la empresa o familia" /></div>
+        <div><label for="ev-email">Email</label><input id="ev-email" name="email" type="email" placeholder="correo@empresa.com" autocomplete="email" required /></div>
+        <div><label for="ev-personas">Personas aproximadas</label><select id="ev-personas" name="personas"><option>1–20</option><option>21–50</option><option>51–80</option><option>81–120</option></select></div>
+        <div class="full"><label for="ev-formato">Tipo de evento</label><select id="ev-formato" name="formato"><option>Posada empresarial</option><option>Convivio familiar</option><option>Retiro de cierre de año</option><option>Otro / a definir</option></select></div>
+        <div class="full"><label for="ev-msg">Fechas y detalles</label><textarea id="ev-msg" name="detalles" rows="3" placeholder="Fechas tentativas, si requieren hospedaje y cualquier detalle importante"></textarea></div>
+        <div class="full"><button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Continuar en WhatsApp</button></div>
+        <p class="full form-note">Al continuar, WhatsApp se abrirá con estos datos. Revisa el mensaje y envíalo para solicitar tu cotización.</p>
       </form>
     </div>
   </div>

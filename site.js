@@ -15,6 +15,37 @@
   var RESERVAS = '/reservas';
   var TKEY = 'taanah_tweaks_v1';
 
+  /* ---- Medición de clics de campañas vía GTM ---- */
+  document.addEventListener('click', function (e) {
+    var target = e.target.closest('[data-track-event]');
+    if (!target) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: target.getAttribute('data-track-event') });
+  });
+
+  /* ---- Solicitudes de posadas/eventos a WhatsApp ---- */
+  var eventQuoteForm = document.getElementById('event-quote-form');
+  if (eventQuoteForm) {
+    eventQuoteForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var values = new FormData(eventQuoteForm);
+      var message = [
+        'Hola, quiero cotizar una posada o convivio en Taanah.',
+        'Nombre: ' + (values.get('nombre') || ''),
+        'Empresa o familia: ' + (values.get('grupo') || 'No especificado'),
+        'Correo: ' + (values.get('email') || ''),
+        'Personas aproximadas: ' + (values.get('personas') || ''),
+        'Tipo de evento: ' + (values.get('formato') || ''),
+        'Fechas y detalles: ' + (values.get('detalles') || 'Pendientes de definir')
+      ].join('\n');
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'taanah_event_quote_whatsapp', event_format: values.get('formato') || '' });
+      var wa = window.open('https://wa.me/523316990962?text=' + encodeURIComponent(message), '_blank');
+      if (wa) wa.opener = null;
+      else window.location.href = 'https://wa.me/523316990962?text=' + encodeURIComponent(message);
+    });
+  }
+
   /* ---- Promo bar NYE2027 ---- */
   (function () {
     var PKEY = 'taanah_promo_nye2027';

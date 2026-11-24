@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/buen-fin-2026",
+      "destination": "https://www.taanahglamping.com/eventos",
+      "permanent": true
+    },
+    {
+      "source": "/buen-fin-2026.html",
+      "destination": "https://www.taanahglamping.com/eventos",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
